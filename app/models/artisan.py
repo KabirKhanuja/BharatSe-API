@@ -50,6 +50,7 @@ class ArtisanProfile(SQLModel, table=True):
     user_id: uuid.UUID = Field(foreign_key="users.id", index=True, unique=True)
 
     state_code: str = Field(max_length=4, index=True)
+    district: str | None = Field(default=None, max_length=80)
     cluster: str | None = Field(default=None, max_length=80)
     craft: str | None = Field(default=None, max_length=80)
 
@@ -61,6 +62,8 @@ class ArtisanProfile(SQLModel, table=True):
 
     # Baseline captured at intake, so income lift can be measured later.
     intake_monthly_income: int | None = Field(default=None)
+    bio: str | None = Field(default=None)
+    profile_image_path: str | None = Field(default=None)
 
     created_at: datetime = Field(default_factory=utcnow, nullable=False)
     updated_at: datetime = Field(default_factory=utcnow, nullable=False)

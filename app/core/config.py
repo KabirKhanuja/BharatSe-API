@@ -36,10 +36,22 @@ class Settings(BaseSettings):
 
     SARVAM_API_KEY: str = ""
 
-    # Never leave this unset in code. rembg's default model is BRIA RMBG, which
+    # Image studio. The primary path is generative: Gemini redraws the piece on
+    # a clean background rather than subtracting the old one. rembg stays as the
+    # offline fallback.
+    #
+    # Never leave REMBG_MODEL unset in code. rembg's default is BRIA RMBG, which
     # requires a paid commercial agreement. isnet-general-use is Apache 2.0.
+    GEMINI_IMAGE_MODEL: str = "gemini-3-pro-image"
+    IMAGE_ASPECT_RATIO: str = "1:1"
     REMBG_MODEL: str = "isnet-general-use"
     REPLICATE_API_TOKEN: str = ""
+
+    # Supabase. Storage uses the service role key, which must never reach the
+    # app: it bypasses row level security by design.
+    SUPABASE_URL: str = ""
+    SUPABASE_SERVICE_KEY: str = ""
+    SUPABASE_BUCKET: str = "product-assets"
 
     PRICE_MODEL_DIR: str = "data/models"
     FAIR_WAGE_PER_HOUR: int = 60
