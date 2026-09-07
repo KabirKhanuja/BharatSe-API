@@ -8,6 +8,7 @@ from sqlmodel import col, func, select
 from app.api.deps import CurrentArtisan, SessionDep
 from app.core.errors import NotFoundError
 from app.core.logging import get_logger
+from app.models.artisan import ArtisanProfile
 from app.models.product import Product, ProductStatus
 from app.schemas.common import Page
 from app.schemas.product import (
@@ -21,6 +22,46 @@ from app.services.pricing import PriceInput, suggest_price
 
 router = APIRouter(prefix="/products", tags=["products"])
 log = get_logger(__name__)
+
+
+def _status_for(session, artisan_id) -> ProductStatus:
+    """Whether this artisan's listings go live or wait.
+
+    A verified artisan publishes straight to the buyer catalogue. An unverified
+    one can still list, and her work is held at `ready` until an officer
+    approves her identity.
+
+    This is what makes verification mean something. Without it, approval is a
+    screen a judge is told about; with it, approval is the thing standing
+    between a listing and a buyer.
+    """
+    profile = session.exec(
+        select(ArtisanProfile).where(ArtisanProfile.user_id == artisan_id)
+    ).first()
+
+    return (
+        ProductStatus.PUBLISHED
+        if profile is not None and profile.is_verified
+        else ProductStatus.READY
+    )
+
+
+def _inherit_location(session, artisan_id, product: Product) -> None:
+    """Take the state from the artisan's profile when the listing has none.
+
+    She is asked where she works once, during verification, rather than on
+    every product. Everything in the buyer app groups by state, so a listing
+    without one is invisible on the map and in every state page.
+    """
+    if product.state_code:
+        return
+
+    profile = session.exec(
+        select(ArtisanProfile).where(ArtisanProfile.user_id == artisan_id)
+    ).first()
+
+    if profile is not None and profile.state_code and profile.state_code != "XX":
+        product.state_code = profile.state_code
 
 
 def _apply_pricing(product: Product) -> None:
@@ -83,7 +124,8 @@ def create_product(body: ProductCreate, artisan: CurrentArtisan, session: Sessio
     for field, value in body.model_dump(exclude_unset=True, exclude={"client_id"}).items():
         setattr(product, field, value)
 
-    product.status = ProductStatus.READY
+    product.status = _status_for(session, artisan.id)
+    _inherit_location(session, artisan.id, product)
     _apply_pricing(product)
 
     session.add(product)
@@ -143,7 +185,8 @@ def sync(body: SyncBatch, artisan: CurrentArtisan, session: SessionDep) -> SyncR
         for field, value in item.model_dump(exclude_unset=True, exclude={"client_id"}).items():
             setattr(product, field, value)
 
-        product.status = ProductStatus.READY
+        product.status = _status_for(session, artisan.id)
+        _inherit_location(session, artisan.id, product)
         _apply_pricing(product)
         session.add(product)
         session.flush()

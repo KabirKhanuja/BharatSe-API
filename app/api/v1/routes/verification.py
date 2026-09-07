@@ -108,6 +108,8 @@ async def submit(
     document: UploadFile = File(...),
     state_code: str = Form(default=""),
     craft: str = Form(default=""),
+    district: str = Form(default=""),
+    cluster: str = Form(default=""),
 ) -> VerificationSubmitted:
     """Upload an identity document for review.
 
@@ -155,10 +157,16 @@ async def submit(
     # Store the object path, not a public URL. The reviewer's client signs it.
     profile.verification_document_url = path
     profile.is_verified = False
+    # Where she works, which is what every state page and the ministry
+    # dashboard group by. Without it her listings appear under no state at all.
     if state_code:
-        profile.state_code = state_code[:4]
+        profile.state_code = state_code[:4].upper()
     if craft:
         profile.craft = craft[:80]
+    if district:
+        profile.district = district[:80]
+    if cluster:
+        profile.cluster = cluster[:80]
 
     session.add(profile)
     session.commit()

@@ -2,7 +2,8 @@
 
 import uuid
 from collections import defaultdict
-from typing import Any, Sequence
+from collections.abc import Sequence
+from typing import Any
 
 from fastapi import APIRouter, Query
 from sqlmodel import col, func, select
