@@ -1,0 +1,160 @@
+{
+  "version": "v1",
+  "feature_columns": [
+    "size_m_or_units",
+    "weight_kg",
+    "quality_grade",
+    "design_complexity",
+    "raw_material_cost_inr",
+    "labour_cost_inr",
+    "inbound_procurement_cost_inr",
+    "production_overhead_inr",
+    "material_price_latest",
+    "material_trend_30d_pct",
+    "odop_state_product_count",
+    "odop_state_gi_count",
+    "odop_state_sector_count",
+    "ec_purchase_rate",
+    "ec_avg_unit_price",
+    "demand_index",
+    "market_median",
+    "market_min",
+    "market_max",
+    "market_mean",
+    "mrp_median",
+    "discount_pct_median",
+    "seller_count_median",
+    "rating_median",
+    "comparable_count",
+    "market_dispersion",
+    "trend_7d_pct",
+    "trend_30d_pct",
+    "trend_90d_pct",
+    "category",
+    "craft_type",
+    "material",
+    "state",
+    "district",
+    "season"
+  ],
+  "categorical_levels": {
+    "category": [
+      "Accessory",
+      "Bag",
+      "Basket",
+      "Home Decor",
+      "Jewellery",
+      "Pottery",
+      "Saree",
+      "Stole",
+      "Wall Art"
+    ],
+    "craft_type": [
+      "Basketry",
+      "Block Print",
+      "Embroidery",
+      "Handloom",
+      "Jewellery",
+      "Leather Craft",
+      "Metal Craft",
+      "Pottery",
+      "Wood Craft"
+    ],
+    "material": [
+      "Bamboo",
+      "Brass",
+      "Clay",
+      "Cotton",
+      "Jute",
+      "Leather",
+      "Silk",
+      "Silver-plated",
+      "Wood",
+      "Wool"
+    ],
+    "state": [
+      "Assam",
+      "Gujarat",
+      "Karnataka",
+      "Maharashtra",
+      "Odisha",
+      "Rajasthan",
+      "Tamil Nadu",
+      "Telangana",
+      "Uttar Pradesh",
+      "West Bengal"
+    ],
+    "district": [
+      "Ahmedabad",
+      "Bankura",
+      "Barmer",
+      "Barpeta",
+      "Bengaluru Rural",
+      "Bhadohi",
+      "Channapatna",
+      "Coimbatore",
+      "Cuttack",
+      "Dharwad",
+      "Dibrugarh",
+      "Hooghly",
+      "Hyderabad",
+      "Jaipur",
+      "Jodhpur",
+      "Kamrup",
+      "Kanchipuram",
+      "Karimnagar",
+      "Kolhapur",
+      "Koraput",
+      "Kutch",
+      "Lucknow",
+      "Madurai",
+      "Moradabad",
+      "Murshidabad",
+      "Mysuru",
+      "Nadia",
+      "Nagpur",
+      "Nalgonda",
+      "Pune",
+      "Puri",
+      "Salem",
+      "Sambalpur",
+      "Sivasagar",
+      "Solapur",
+      "Surat",
+      "Udaipur",
+      "Vadodara",
+      "Varanasi",
+      "Warangal"
+    ],
+    "season": [
+      "Festival",
+      "Monsoon",
+      "Normal",
+      "Summer",
+      "Wedding",
+      "Winter"
+    ]
+  },
+  "imputation": {},
+  "models": {
+    "p50": {
+      "path": "lgbm_p50.txt",
+      "sha256": "721b22abc7df6908abfd345c897757191478d77d80557445e73845d44aafde8d"
+    },
+    "p10": {
+      "path": "lgbm_p10.txt",
+      "sha256": "5f95e86b45d5dea25bbc00551936709352a66347cb861e9ed09544505e0fe710"
+    },
+    "p50_quantile": {
+      "path": "lgbm_p50_quantile.txt",
+      "sha256": "27429e8f2185634a316d9d3fd9643af41981d167abef90d7a6f390c1fd5a8689"
+    },
+    "p90": {
+      "path": "lgbm_p90.txt",
+      "sha256": "ec1d34c3144490eb631b8a9433fc103a746b2b44dae18bc20304c77719dee22e"
+    }
+  },
+  "market_buckets": {
+    "path": "market_buckets.parquet"
+  }
+}

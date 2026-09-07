@@ -1,0 +1,901 @@
+state,district_or_market,material,date,modal_price_inr_per_unit
+Maharashtra,Pune,Cotton,2026-01-01,837.35
+Maharashtra,Solapur,Cotton,2026-02-01,792.52
+Maharashtra,Kolhapur,Cotton,2026-03-01,714.91
+Maharashtra,Nagpur,Cotton,2026-04-01,805.16
+Maharashtra,Nagpur,Cotton,2026-05-01,858.62
+Maharashtra,Nagpur,Cotton,2026-06-01,850.06
+Maharashtra,Kolhapur,Cotton,2026-07-01,787.88
+Maharashtra,Nagpur,Cotton,2026-08-01,726.84
+Maharashtra,Kolhapur,Cotton,2026-09-01,855.38
+Maharashtra,Solapur,Silk,2026-01-01,195.35
+Maharashtra,Pune,Silk,2026-02-01,186.58
+Maharashtra,Solapur,Silk,2026-03-01,210.2
+Maharashtra,Solapur,Silk,2026-04-01,203.95
+Maharashtra,Kolhapur,Silk,2026-05-01,189.08
+Maharashtra,Pune,Silk,2026-06-01,189.85
+Maharashtra,Nagpur,Silk,2026-07-01,222.09
+Maharashtra,Pune,Silk,2026-08-01,215.05
+Maharashtra,Solapur,Silk,2026-09-01,207.41
+Maharashtra,Kolhapur,Wool,2026-01-01,1761.29
+Maharashtra,Kolhapur,Wool,2026-02-01,1613.11
+Maharashtra,Solapur,Wool,2026-03-01,1838.9
+Maharashtra,Solapur,Wool,2026-04-01,1769.49
+Maharashtra,Pune,Wool,2026-05-01,1895.61
+Maharashtra,Pune,Wool,2026-06-01,1616.36
+Maharashtra,Solapur,Wool,2026-07-01,1809.09
+Maharashtra,Pune,Wool,2026-08-01,1757.42
+Maharashtra,Solapur,Wool,2026-09-01,1899.77
+Maharashtra,Kolhapur,Jute,2026-01-01,324.07
+Maharashtra,Pune,Jute,2026-02-01,338.52
+Maharashtra,Pune,Jute,2026-03-01,306.51
+Maharashtra,Nagpur,Jute,2026-04-01,325.59
+Maharashtra,Kolhapur,Jute,2026-05-01,328.29
+Maharashtra,Solapur,Jute,2026-06-01,298.0
+Maharashtra,Kolhapur,Jute,2026-07-01,322.59
+Maharashtra,Nagpur,Jute,2026-08-01,337.14
+Maharashtra,Pune,Jute,2026-09-01,311.1
+Maharashtra,Kolhapur,Clay,2026-01-01,345.37
+Maharashtra,Nagpur,Clay,2026-02-01,293.49
+Maharashtra,Solapur,Clay,2026-03-01,329.03
+Maharashtra,Pune,Clay,2026-04-01,320.31
+Maharashtra,Solapur,Clay,2026-05-01,284.29
+Maharashtra,Solapur,Clay,2026-06-01,319.84
+Maharashtra,Kolhapur,Clay,2026-07-01,309.31
+Maharashtra,Solapur,Clay,2026-08-01,343.63
+Maharashtra,Nagpur,Clay,2026-09-01,353.13
+Maharashtra,Pune,Wood,2026-01-01,716.68
+Maharashtra,Nagpur,Wood,2026-02-01,772.27
+Maharashtra,Nagpur,Wood,2026-03-01,737.43
+Maharashtra,Kolhapur,Wood,2026-04-01,822.27
+Maharashtra,Solapur,Wood,2026-05-01,852.39
+Maharashtra,Nagpur,Wood,2026-06-01,848.38
+Maharashtra,Kolhapur,Wood,2026-07-01,788.58
+Maharashtra,Kolhapur,Wood,2026-08-01,782.79
+Maharashtra,Pune,Wood,2026-09-01,706.93
+Maharashtra,Pune,Brass,2026-01-01,1844.4
+Maharashtra,Solapur,Brass,2026-02-01,1579.65
+Maharashtra,Nagpur,Brass,2026-03-01,1521.69
+Maharashtra,Pune,Brass,2026-04-01,1707.03
+Maharashtra,Solapur,Brass,2026-05-01,1850.08
+Maharashtra,Kolhapur,Brass,2026-06-01,1671.39
+Maharashtra,Nagpur,Brass,2026-07-01,1599.24
+Maharashtra,Solapur,Brass,2026-08-01,1612.92
+Maharashtra,Nagpur,Brass,2026-09-01,1864.99
+Maharashtra,Nagpur,Silver-plated,2026-01-01,504.95
+Maharashtra,Kolhapur,Silver-plated,2026-02-01,568.66
+Maharashtra,Solapur,Silver-plated,2026-03-01,516.49
+Maharashtra,Nagpur,Silver-plated,2026-04-01,529.94
+Maharashtra,Nagpur,Silver-plated,2026-05-01,577.12
+Maharashtra,Nagpur,Silver-plated,2026-06-01,587.65
+Maharashtra,Kolhapur,Silver-plated,2026-07-01,598.2
+Maharashtra,Pune,Silver-plated,2026-08-01,504.42
+Maharashtra,Kolhapur,Silver-plated,2026-09-01,565.57
+Maharashtra,Solapur,Bamboo,2026-01-01,626.06
+Maharashtra,Solapur,Bamboo,2026-02-01,548.9
+Maharashtra,Pune,Bamboo,2026-03-01,636.61
+Maharashtra,Kolhapur,Bamboo,2026-04-01,623.94
+Maharashtra,Solapur,Bamboo,2026-05-01,524.13
+Maharashtra,Kolhapur,Bamboo,2026-06-01,558.19
+Maharashtra,Nagpur,Bamboo,2026-07-01,649.42
+Maharashtra,Pune,Bamboo,2026-08-01,573.15
+Maharashtra,Nagpur,Bamboo,2026-09-01,596.04
+Maharashtra,Kolhapur,Leather,2026-01-01,1488.64
+Maharashtra,Solapur,Leather,2026-02-01,1447.12
+Maharashtra,Pune,Leather,2026-03-01,1662.19
+Maharashtra,Solapur,Leather,2026-04-01,1498.28
+Maharashtra,Nagpur,Leather,2026-05-01,1653.11
+Maharashtra,Kolhapur,Leather,2026-06-01,1701.38
+Maharashtra,Nagpur,Leather,2026-07-01,1432.74
+Maharashtra,Kolhapur,Leather,2026-08-01,1503.76
+Maharashtra,Nagpur,Leather,2026-09-01,1718.71
+Gujarat,Vadodara,Cotton,2026-01-01,957.46
+Gujarat,Kutch,Cotton,2026-02-01,930.71
+Gujarat,Surat,Cotton,2026-03-01,872.75
+Gujarat,Surat,Cotton,2026-04-01,963.24
+Gujarat,Kutch,Cotton,2026-05-01,808.01
+Gujarat,Kutch,Cotton,2026-06-01,933.87
+Gujarat,Vadodara,Cotton,2026-07-01,945.44
+Gujarat,Ahmedabad,Cotton,2026-08-01,898.92
+Gujarat,Surat,Cotton,2026-09-01,909.0
+Gujarat,Kutch,Silk,2026-01-01,704.28
+Gujarat,Kutch,Silk,2026-02-01,671.61
+Gujarat,Vadodara,Silk,2026-03-01,608.64
+Gujarat,Kutch,Silk,2026-04-01,580.56
+Gujarat,Surat,Silk,2026-05-01,641.54
+Gujarat,Kutch,Silk,2026-06-01,669.77
+Gujarat,Vadodara,Silk,2026-07-01,617.4
+Gujarat,Ahmedabad,Silk,2026-08-01,619.59
+Gujarat,Ahmedabad,Silk,2026-09-01,587.21
+Gujarat,Vadodara,Wool,2026-01-01,1293.34
+Gujarat,Vadodara,Wool,2026-02-01,1321.28
+Gujarat,Ahmedabad,Wool,2026-03-01,1257.13
+Gujarat,Kutch,Wool,2026-04-01,1435.86
+Gujarat,Ahmedabad,Wool,2026-05-01,1518.01
+Gujarat,Kutch,Wool,2026-06-01,1254.57
+Gujarat,Surat,Wool,2026-07-01,1264.22
+Gujarat,Ahmedabad,Wool,2026-08-01,1375.57
+Gujarat,Kutch,Wool,2026-09-01,1353.29
+Gujarat,Kutch,Jute,2026-01-01,1202.49
+Gujarat,Kutch,Jute,2026-02-01,1040.07
+Gujarat,Vadodara,Jute,2026-03-01,1103.95
+Gujarat,Kutch,Jute,2026-04-01,1085.3
+Gujarat,Ahmedabad,Jute,2026-05-01,1167.12
+Gujarat,Vadodara,Jute,2026-06-01,1020.91
+Gujarat,Surat,Jute,2026-07-01,1045.17
+Gujarat,Ahmedabad,Jute,2026-08-01,1044.66
+Gujarat,Kutch,Jute,2026-09-01,1181.47
+Gujarat,Kutch,Clay,2026-01-01,1612.28
+Gujarat,Surat,Clay,2026-02-01,1414.69
+Gujarat,Surat,Clay,2026-03-01,1520.69
+Gujarat,Vadodara,Clay,2026-04-01,1371.37
+Gujarat,Kutch,Clay,2026-05-01,1467.41
+Gujarat,Vadodara,Clay,2026-06-01,1337.28
+Gujarat,Kutch,Clay,2026-07-01,1477.53
+Gujarat,Surat,Clay,2026-08-01,1558.77
+Gujarat,Surat,Clay,2026-09-01,1589.24
+Gujarat,Surat,Wood,2026-01-01,1709.97
+Gujarat,Surat,Wood,2026-02-01,1924.27
+Gujarat,Ahmedabad,Wood,2026-03-01,1776.25
+Gujarat,Ahmedabad,Wood,2026-04-01,1847.4
+Gujarat,Kutch,Wood,2026-05-01,1754.98
+Gujarat,Vadodara,Wood,2026-06-01,1932.03
+Gujarat,Vadodara,Wood,2026-07-01,1937.99
+Gujarat,Kutch,Wood,2026-08-01,1918.84
+Gujarat,Surat,Wood,2026-09-01,1867.97
+Gujarat,Surat,Brass,2026-01-01,291.29
+Gujarat,Surat,Brass,2026-02-01,318.01
+Gujarat,Surat,Brass,2026-03-01,301.12
+Gujarat,Surat,Brass,2026-04-01,321.94
+Gujarat,Surat,Brass,2026-05-01,285.44
+Gujarat,Vadodara,Brass,2026-06-01,277.6
+Gujarat,Vadodara,Brass,2026-07-01,286.56
+Gujarat,Vadodara,Brass,2026-08-01,301.54
+Gujarat,Kutch,Brass,2026-09-01,293.06
+Gujarat,Ahmedabad,Silver-plated,2026-01-01,616.54
+Gujarat,Ahmedabad,Silver-plated,2026-02-01,691.23
+Gujarat,Kutch,Silver-plated,2026-03-01,597.21
+Gujarat,Kutch,Silver-plated,2026-04-01,694.65
+Gujarat,Kutch,Silver-plated,2026-05-01,699.84
+Gujarat,Vadodara,Silver-plated,2026-06-01,650.48
+Gujarat,Ahmedabad,Silver-plated,2026-07-01,659.31
+Gujarat,Ahmedabad,Silver-plated,2026-08-01,673.25
+Gujarat,Ahmedabad,Silver-plated,2026-09-01,598.99
+Gujarat,Kutch,Bamboo,2026-01-01,1042.26
+Gujarat,Vadodara,Bamboo,2026-02-01,1054.28
+Gujarat,Surat,Bamboo,2026-03-01,1027.75
+Gujarat,Vadodara,Bamboo,2026-04-01,1092.12
+Gujarat,Surat,Bamboo,2026-05-01,1125.43
+Gujarat,Surat,Bamboo,2026-06-01,1191.52
+Gujarat,Ahmedabad,Bamboo,2026-07-01,1042.34
+Gujarat,Surat,Bamboo,2026-08-01,1087.29
+Gujarat,Surat,Bamboo,2026-09-01,1142.73
+Gujarat,Ahmedabad,Leather,2026-01-01,1326.99
+Gujarat,Kutch,Leather,2026-02-01,1274.98
+Gujarat,Vadodara,Leather,2026-03-01,1328.61
+Gujarat,Kutch,Leather,2026-04-01,1225.65
+Gujarat,Ahmedabad,Leather,2026-05-01,1194.63
+Gujarat,Kutch,Leather,2026-06-01,1364.19
+Gujarat,Vadodara,Leather,2026-07-01,1449.44
+Gujarat,Vadodara,Leather,2026-08-01,1392.28
+Gujarat,Ahmedabad,Leather,2026-09-01,1312.76
+Rajasthan,Udaipur,Cotton,2026-01-01,1718.67
+Rajasthan,Jaipur,Cotton,2026-02-01,1772.36
+Rajasthan,Udaipur,Cotton,2026-03-01,1569.33
+Rajasthan,Jodhpur,Cotton,2026-04-01,1820.72
+Rajasthan,Barmer,Cotton,2026-05-01,1691.25
+Rajasthan,Udaipur,Cotton,2026-06-01,1668.88
+Rajasthan,Jodhpur,Cotton,2026-07-01,1776.02
+Rajasthan,Jaipur,Cotton,2026-08-01,1557.11
+Rajasthan,Jaipur,Cotton,2026-09-01,1651.41
+Rajasthan,Barmer,Silk,2026-01-01,804.07
+Rajasthan,Jaipur,Silk,2026-02-01,685.25
+Rajasthan,Barmer,Silk,2026-03-01,816.75
+Rajasthan,Jaipur,Silk,2026-04-01,701.23
+Rajasthan,Jaipur,Silk,2026-05-01,743.48
+Rajasthan,Udaipur,Silk,2026-06-01,747.4
+Rajasthan,Jaipur,Silk,2026-07-01,748.52
+Rajasthan,Udaipur,Silk,2026-08-01,671.93
+Rajasthan,Jaipur,Silk,2026-09-01,791.2
+Rajasthan,Jodhpur,Wool,2026-01-01,1126.5
+Rajasthan,Barmer,Wool,2026-02-01,997.73
+Rajasthan,Jodhpur,Wool,2026-03-01,934.04
+Rajasthan,Jaipur,Wool,2026-04-01,1008.14
+Rajasthan,Jodhpur,Wool,2026-05-01,926.06
+Rajasthan,Jaipur,Wool,2026-06-01,930.94
+Rajasthan,Udaipur,Wool,2026-07-01,1090.52
+Rajasthan,Jaipur,Wool,2026-08-01,1104.58
+Rajasthan,Jodhpur,Wool,2026-09-01,999.45
+Rajasthan,Udaipur,Jute,2026-01-01,973.89
+Rajasthan,Udaipur,Jute,2026-02-01,901.59
+Rajasthan,Jodhpur,Jute,2026-03-01,984.77
+Rajasthan,Jodhpur,Jute,2026-04-01,972.58
+Rajasthan,Jaipur,Jute,2026-05-01,1091.88
+Rajasthan,Udaipur,Jute,2026-06-01,947.86
+Rajasthan,Udaipur,Jute,2026-07-01,1044.29
+Rajasthan,Udaipur,Jute,2026-08-01,1081.48
+Rajasthan,Udaipur,Jute,2026-09-01,943.74
+Rajasthan,Jodhpur,Clay,2026-01-01,266.7
+Rajasthan,Udaipur,Clay,2026-02-01,264.61
+Rajasthan,Barmer,Clay,2026-03-01,235.71
+Rajasthan,Jaipur,Clay,2026-04-01,264.44
+Rajasthan,Jodhpur,Clay,2026-05-01,260.62
+Rajasthan,Udaipur,Clay,2026-06-01,251.78
+Rajasthan,Barmer,Clay,2026-07-01,242.01
+Rajasthan,Barmer,Clay,2026-08-01,237.65
+Rajasthan,Jodhpur,Clay,2026-09-01,263.97
+Rajasthan,Jaipur,Wood,2026-01-01,1527.26
+Rajasthan,Barmer,Wood,2026-02-01,1671.91
+Rajasthan,Barmer,Wood,2026-03-01,1432.39
+Rajasthan,Jaipur,Wood,2026-04-01,1603.23
+Rajasthan,Jodhpur,Wood,2026-05-01,1710.61
+Rajasthan,Udaipur,Wood,2026-06-01,1668.35
+Rajasthan,Jodhpur,Wood,2026-07-01,1714.78
+Rajasthan,Udaipur,Wood,2026-08-01,1606.75
+Rajasthan,Udaipur,Wood,2026-09-01,1420.31
+Rajasthan,Jodhpur,Brass,2026-01-01,871.29
+Rajasthan,Jodhpur,Brass,2026-02-01,899.84
+Rajasthan,Udaipur,Brass,2026-03-01,855.23
+Rajasthan,Udaipur,Brass,2026-04-01,889.37
+Rajasthan,Barmer,Brass,2026-05-01,943.61
+Rajasthan,Udaipur,Brass,2026-06-01,951.12
+Rajasthan,Udaipur,Brass,2026-07-01,855.12
+Rajasthan,Jaipur,Brass,2026-08-01,954.88
+Rajasthan,Barmer,Brass,2026-09-01,1040.62
+Rajasthan,Jodhpur,Silver-plated,2026-01-01,143.36
+Rajasthan,Barmer,Silver-plated,2026-02-01,141.32
+Rajasthan,Jaipur,Silver-plated,2026-03-01,160.86
+Rajasthan,Jodhpur,Silver-plated,2026-04-01,165.08
+Rajasthan,Jodhpur,Silver-plated,2026-05-01,148.89
+Rajasthan,Udaipur,Silver-plated,2026-06-01,160.55
+Rajasthan,Jodhpur,Silver-plated,2026-07-01,166.97
+Rajasthan,Udaipur,Silver-plated,2026-08-01,161.17
+Rajasthan,Jaipur,Silver-plated,2026-09-01,137.8
+Rajasthan,Jodhpur,Bamboo,2026-01-01,987.47
+Rajasthan,Udaipur,Bamboo,2026-02-01,977.2
+Rajasthan,Udaipur,Bamboo,2026-03-01,1033.23
+Rajasthan,Jaipur,Bamboo,2026-04-01,946.31
+Rajasthan,Udaipur,Bamboo,2026-05-01,960.98
+Rajasthan,Udaipur,Bamboo,2026-06-01,965.67
+Rajasthan,Udaipur,Bamboo,2026-07-01,867.85
+Rajasthan,Jodhpur,Bamboo,2026-08-01,948.91
+Rajasthan,Barmer,Bamboo,2026-09-01,1019.82
+Rajasthan,Barmer,Leather,2026-01-01,1181.36
+Rajasthan,Jodhpur,Leather,2026-02-01,1361.24
+Rajasthan,Jodhpur,Leather,2026-03-01,1161.88
+Rajasthan,Jodhpur,Leather,2026-04-01,1254.58
+Rajasthan,Jaipur,Leather,2026-05-01,1354.69
+Rajasthan,Jodhpur,Leather,2026-06-01,1251.05
+Rajasthan,Jaipur,Leather,2026-07-01,1240.06
+Rajasthan,Jodhpur,Leather,2026-08-01,1294.79
+Rajasthan,Udaipur,Leather,2026-09-01,1352.72
+West Bengal,Murshidabad,Cotton,2026-01-01,504.08
+West Bengal,Hooghly,Cotton,2026-02-01,420.32
+West Bengal,Murshidabad,Cotton,2026-03-01,433.82
+West Bengal,Nadia,Cotton,2026-04-01,463.41
+West Bengal,Nadia,Cotton,2026-05-01,466.09
+West Bengal,Hooghly,Cotton,2026-06-01,432.21
+West Bengal,Bankura,Cotton,2026-07-01,494.5
+West Bengal,Murshidabad,Cotton,2026-08-01,417.68
+West Bengal,Hooghly,Cotton,2026-09-01,419.93
+West Bengal,Hooghly,Silk,2026-01-01,466.34
+West Bengal,Nadia,Silk,2026-02-01,513.59
+West Bengal,Bankura,Silk,2026-03-01,441.27
+West Bengal,Bankura,Silk,2026-04-01,456.83
+West Bengal,Bankura,Silk,2026-05-01,520.78
+West Bengal,Murshidabad,Silk,2026-06-01,450.91
+West Bengal,Bankura,Silk,2026-07-01,443.5
+West Bengal,Hooghly,Silk,2026-08-01,516.92
+West Bengal,Hooghly,Silk,2026-09-01,468.3
+West Bengal,Hooghly,Wool,2026-01-01,369.18
+West Bengal,Hooghly,Wool,2026-02-01,422.47
+West Bengal,Murshidabad,Wool,2026-03-01,394.81
+West Bengal,Hooghly,Wool,2026-04-01,400.8
+West Bengal,Murshidabad,Wool,2026-05-01,397.47
+West Bengal,Murshidabad,Wool,2026-06-01,392.15
+West Bengal,Murshidabad,Wool,2026-07-01,410.67
+West Bengal,Bankura,Wool,2026-08-01,385.54
+West Bengal,Hooghly,Wool,2026-09-01,366.86
+West Bengal,Nadia,Jute,2026-01-01,431.68
+West Bengal,Bankura,Jute,2026-02-01,365.26
+West Bengal,Murshidabad,Jute,2026-03-01,419.3
+West Bengal,Murshidabad,Jute,2026-04-01,428.8
+West Bengal,Bankura,Jute,2026-05-01,362.19
+West Bengal,Hooghly,Jute,2026-06-01,384.52
+West Bengal,Nadia,Jute,2026-07-01,372.28
+West Bengal,Bankura,Jute,2026-08-01,438.02
+West Bengal,Murshidabad,Jute,2026-09-01,368.33
+West Bengal,Murshidabad,Clay,2026-01-01,1140.16
+West Bengal,Murshidabad,Clay,2026-02-01,942.12
+West Bengal,Nadia,Clay,2026-03-01,947.14
+West Bengal,Murshidabad,Clay,2026-04-01,1112.51
+West Bengal,Nadia,Clay,2026-05-01,1142.06
+West Bengal,Bankura,Clay,2026-06-01,964.19
+West Bengal,Hooghly,Clay,2026-07-01,1023.26
+West Bengal,Murshidabad,Clay,2026-08-01,1098.41
+West Bengal,Hooghly,Clay,2026-09-01,972.19
+West Bengal,Bankura,Wood,2026-01-01,1570.55
+West Bengal,Hooghly,Wood,2026-02-01,1383.32
+West Bengal,Hooghly,Wood,2026-03-01,1458.23
+West Bengal,Hooghly,Wood,2026-04-01,1369.76
+West Bengal,Murshidabad,Wood,2026-05-01,1470.28
+West Bengal,Nadia,Wood,2026-06-01,1341.27
+West Bengal,Murshidabad,Wood,2026-07-01,1446.53
+West Bengal,Hooghly,Wood,2026-08-01,1510.9
+West Bengal,Nadia,Wood,2026-09-01,1349.73
+West Bengal,Bankura,Brass,2026-01-01,1422.79
+West Bengal,Bankura,Brass,2026-02-01,1484.56
+West Bengal,Bankura,Brass,2026-03-01,1660.69
+West Bengal,Hooghly,Brass,2026-04-01,1410.81
+West Bengal,Nadia,Brass,2026-05-01,1415.49
+West Bengal,Hooghly,Brass,2026-06-01,1530.09
+West Bengal,Hooghly,Brass,2026-07-01,1648.89
+West Bengal,Hooghly,Brass,2026-08-01,1425.63
+West Bengal,Murshidabad,Brass,2026-09-01,1597.27
+West Bengal,Murshidabad,Silver-plated,2026-01-01,1624.15
+West Bengal,Murshidabad,Silver-plated,2026-02-01,1378.65
+West Bengal,Hooghly,Silver-plated,2026-03-01,1385.31
+West Bengal,Hooghly,Silver-plated,2026-04-01,1509.78
+West Bengal,Hooghly,Silver-plated,2026-05-01,1610.4
+West Bengal,Bankura,Silver-plated,2026-06-01,1492.2
+West Bengal,Murshidabad,Silver-plated,2026-07-01,1700.33
+West Bengal,Nadia,Silver-plated,2026-08-01,1643.11
+West Bengal,Hooghly,Silver-plated,2026-09-01,1524.3
+West Bengal,Bankura,Bamboo,2026-01-01,317.24
+West Bengal,Hooghly,Bamboo,2026-02-01,386.64
+West Bengal,Murshidabad,Bamboo,2026-03-01,393.85
+West Bengal,Murshidabad,Bamboo,2026-04-01,325.12
+West Bengal,Hooghly,Bamboo,2026-05-01,321.4
+West Bengal,Murshidabad,Bamboo,2026-06-01,341.22
+West Bengal,Murshidabad,Bamboo,2026-07-01,358.0
+West Bengal,Hooghly,Bamboo,2026-08-01,339.59
+West Bengal,Bankura,Bamboo,2026-09-01,321.62
+West Bengal,Murshidabad,Leather,2026-01-01,1691.41
+West Bengal,Bankura,Leather,2026-02-01,1563.5
+West Bengal,Hooghly,Leather,2026-03-01,1839.66
+West Bengal,Bankura,Leather,2026-04-01,1558.38
+West Bengal,Murshidabad,Leather,2026-05-01,1707.58
+West Bengal,Nadia,Leather,2026-06-01,1762.56
+West Bengal,Murshidabad,Leather,2026-07-01,1839.69
+West Bengal,Nadia,Leather,2026-08-01,1763.27
+West Bengal,Bankura,Leather,2026-09-01,1647.09
+Uttar Pradesh,Lucknow,Cotton,2026-01-01,915.54
+Uttar Pradesh,Varanasi,Cotton,2026-02-01,950.48
+Uttar Pradesh,Varanasi,Cotton,2026-03-01,967.77
+Uttar Pradesh,Lucknow,Cotton,2026-04-01,926.3
+Uttar Pradesh,Bhadohi,Cotton,2026-05-01,839.49
+Uttar Pradesh,Moradabad,Cotton,2026-06-01,1013.1
+Uttar Pradesh,Moradabad,Cotton,2026-07-01,995.04
+Uttar Pradesh,Varanasi,Cotton,2026-08-01,983.68
+Uttar Pradesh,Varanasi,Cotton,2026-09-01,847.9
+Uttar Pradesh,Lucknow,Silk,2026-01-01,981.88
+Uttar Pradesh,Varanasi,Silk,2026-02-01,1067.33
+Uttar Pradesh,Bhadohi,Silk,2026-03-01,1040.73
+Uttar Pradesh,Moradabad,Silk,2026-04-01,1173.46
+Uttar Pradesh,Moradabad,Silk,2026-05-01,1064.06
+Uttar Pradesh,Bhadohi,Silk,2026-06-01,949.32
+Uttar Pradesh,Bhadohi,Silk,2026-07-01,1063.05
+Uttar Pradesh,Lucknow,Silk,2026-08-01,1137.81
+Uttar Pradesh,Varanasi,Silk,2026-09-01,1026.04
+Uttar Pradesh,Bhadohi,Wool,2026-01-01,1040.67
+Uttar Pradesh,Bhadohi,Wool,2026-02-01,878.9
+Uttar Pradesh,Moradabad,Wool,2026-03-01,979.15
+Uttar Pradesh,Varanasi,Wool,2026-04-01,1036.85
+Uttar Pradesh,Varanasi,Wool,2026-05-01,930.87
+Uttar Pradesh,Lucknow,Wool,2026-06-01,882.22
+Uttar Pradesh,Bhadohi,Wool,2026-07-01,1021.5
+Uttar Pradesh,Bhadohi,Wool,2026-08-01,967.77
+Uttar Pradesh,Varanasi,Wool,2026-09-01,972.05
+Uttar Pradesh,Varanasi,Jute,2026-01-01,1039.77
+Uttar Pradesh,Bhadohi,Jute,2026-02-01,1174.9
+Uttar Pradesh,Varanasi,Jute,2026-03-01,1080.1
+Uttar Pradesh,Bhadohi,Jute,2026-04-01,993.68
+Uttar Pradesh,Lucknow,Jute,2026-05-01,1128.97
+Uttar Pradesh,Bhadohi,Jute,2026-06-01,1152.93
+Uttar Pradesh,Bhadohi,Jute,2026-07-01,1155.38
+Uttar Pradesh,Lucknow,Jute,2026-08-01,996.64
+Uttar Pradesh,Lucknow,Jute,2026-09-01,1143.79
+Uttar Pradesh,Bhadohi,Clay,2026-01-01,391.89
+Uttar Pradesh,Varanasi,Clay,2026-02-01,438.13
+Uttar Pradesh,Bhadohi,Clay,2026-03-01,385.09
+Uttar Pradesh,Bhadohi,Clay,2026-04-01,402.76
+Uttar Pradesh,Bhadohi,Clay,2026-05-01,410.36
+Uttar Pradesh,Lucknow,Clay,2026-06-01,387.25
+Uttar Pradesh,Moradabad,Clay,2026-07-01,435.42
+Uttar Pradesh,Lucknow,Clay,2026-08-01,432.97
+Uttar Pradesh,Moradabad,Clay,2026-09-01,393.53
+Uttar Pradesh,Lucknow,Wood,2026-01-01,662.48
+Uttar Pradesh,Varanasi,Wood,2026-02-01,583.38
+Uttar Pradesh,Bhadohi,Wood,2026-03-01,627.36
+Uttar Pradesh,Lucknow,Wood,2026-04-01,603.08
+Uttar Pradesh,Bhadohi,Wood,2026-05-01,670.35
+Uttar Pradesh,Bhadohi,Wood,2026-06-01,607.84
+Uttar Pradesh,Varanasi,Wood,2026-07-01,702.0
+Uttar Pradesh,Moradabad,Wood,2026-08-01,714.38
+Uttar Pradesh,Bhadohi,Wood,2026-09-01,610.69
+Uttar Pradesh,Moradabad,Brass,2026-01-01,742.46
+Uttar Pradesh,Lucknow,Brass,2026-02-01,848.19
+Uttar Pradesh,Varanasi,Brass,2026-03-01,859.56
+Uttar Pradesh,Varanasi,Brass,2026-04-01,709.55
+Uttar Pradesh,Moradabad,Brass,2026-05-01,701.32
+Uttar Pradesh,Bhadohi,Brass,2026-06-01,747.55
+Uttar Pradesh,Moradabad,Brass,2026-07-01,707.74
+Uttar Pradesh,Lucknow,Brass,2026-08-01,715.24
+Uttar Pradesh,Varanasi,Brass,2026-09-01,713.16
+Uttar Pradesh,Moradabad,Silver-plated,2026-01-01,1571.85
+Uttar Pradesh,Moradabad,Silver-plated,2026-02-01,1809.85
+Uttar Pradesh,Moradabad,Silver-plated,2026-03-01,1649.59
+Uttar Pradesh,Varanasi,Silver-plated,2026-04-01,1666.92
+Uttar Pradesh,Bhadohi,Silver-plated,2026-05-01,1626.03
+Uttar Pradesh,Bhadohi,Silver-plated,2026-06-01,1639.46
+Uttar Pradesh,Moradabad,Silver-plated,2026-07-01,1783.96
+Uttar Pradesh,Lucknow,Silver-plated,2026-08-01,1600.06
+Uttar Pradesh,Varanasi,Silver-plated,2026-09-01,1644.69
+Uttar Pradesh,Varanasi,Bamboo,2026-01-01,1321.1
+Uttar Pradesh,Bhadohi,Bamboo,2026-02-01,1208.49
+Uttar Pradesh,Bhadohi,Bamboo,2026-03-01,1251.54
+Uttar Pradesh,Lucknow,Bamboo,2026-04-01,1131.91
+Uttar Pradesh,Lucknow,Bamboo,2026-05-01,1240.46
+Uttar Pradesh,Lucknow,Bamboo,2026-06-01,1275.17
+Uttar Pradesh,Varanasi,Bamboo,2026-07-01,1364.35
+Uttar Pradesh,Bhadohi,Bamboo,2026-08-01,1353.14
+Uttar Pradesh,Lucknow,Bamboo,2026-09-01,1368.52
+Uttar Pradesh,Moradabad,Leather,2026-01-01,1634.2
+Uttar Pradesh,Moradabad,Leather,2026-02-01,1829.08
+Uttar Pradesh,Varanasi,Leather,2026-03-01,1903.07
+Uttar Pradesh,Lucknow,Leather,2026-04-01,1782.38
+Uttar Pradesh,Moradabad,Leather,2026-05-01,1835.3
+Uttar Pradesh,Bhadohi,Leather,2026-06-01,1865.05
+Uttar Pradesh,Lucknow,Leather,2026-07-01,1953.73
+Uttar Pradesh,Moradabad,Leather,2026-08-01,1910.23
+Uttar Pradesh,Bhadohi,Leather,2026-09-01,1824.97
+Tamil Nadu,Coimbatore,Cotton,2026-01-01,705.09
+Tamil Nadu,Coimbatore,Cotton,2026-02-01,753.04
+Tamil Nadu,Coimbatore,Cotton,2026-03-01,756.88
+Tamil Nadu,Salem,Cotton,2026-04-01,743.18
+Tamil Nadu,Madurai,Cotton,2026-05-01,668.84
+Tamil Nadu,Coimbatore,Cotton,2026-06-01,761.97
+Tamil Nadu,Coimbatore,Cotton,2026-07-01,778.98
+Tamil Nadu,Coimbatore,Cotton,2026-08-01,701.86
+Tamil Nadu,Kanchipuram,Cotton,2026-09-01,789.98
+Tamil Nadu,Madurai,Silk,2026-01-01,944.44
+Tamil Nadu,Salem,Silk,2026-02-01,891.33
+Tamil Nadu,Coimbatore,Silk,2026-03-01,787.76
+Tamil Nadu,Salem,Silk,2026-04-01,821.27
+Tamil Nadu,Madurai,Silk,2026-05-01,788.67
+Tamil Nadu,Salem,Silk,2026-06-01,929.44
+Tamil Nadu,Salem,Silk,2026-07-01,925.11
+Tamil Nadu,Coimbatore,Silk,2026-08-01,782.55
+Tamil Nadu,Madurai,Silk,2026-09-01,874.22
+Tamil Nadu,Salem,Wool,2026-01-01,1761.17
+Tamil Nadu,Madurai,Wool,2026-02-01,1771.47
+Tamil Nadu,Coimbatore,Wool,2026-03-01,1745.88
+Tamil Nadu,Madurai,Wool,2026-04-01,1803.59
+Tamil Nadu,Kanchipuram,Wool,2026-05-01,1606.87
+Tamil Nadu,Kanchipuram,Wool,2026-06-01,1719.26
+Tamil Nadu,Kanchipuram,Wool,2026-07-01,1659.96
+Tamil Nadu,Coimbatore,Wool,2026-08-01,1636.36
+Tamil Nadu,Salem,Wool,2026-09-01,1762.8
+Tamil Nadu,Salem,Jute,2026-01-01,514.75
+Tamil Nadu,Salem,Jute,2026-02-01,475.08
+Tamil Nadu,Salem,Jute,2026-03-01,500.64
+Tamil Nadu,Kanchipuram,Jute,2026-04-01,432.6
+Tamil Nadu,Coimbatore,Jute,2026-05-01,505.61
+Tamil Nadu,Madurai,Jute,2026-06-01,442.17
+Tamil Nadu,Kanchipuram,Jute,2026-07-01,424.75
+Tamil Nadu,Salem,Jute,2026-08-01,459.62
+Tamil Nadu,Madurai,Jute,2026-09-01,463.47
+Tamil Nadu,Coimbatore,Clay,2026-01-01,941.4
+Tamil Nadu,Madurai,Clay,2026-02-01,989.66
+Tamil Nadu,Madurai,Clay,2026-03-01,872.43
+Tamil Nadu,Salem,Clay,2026-04-01,962.7
+Tamil Nadu,Coimbatore,Clay,2026-05-01,963.54
+Tamil Nadu,Kanchipuram,Clay,2026-06-01,871.34
+Tamil Nadu,Kanchipuram,Clay,2026-07-01,924.06
+Tamil Nadu,Madurai,Clay,2026-08-01,945.59
+Tamil Nadu,Salem,Clay,2026-09-01,1016.94
+Tamil Nadu,Salem,Wood,2026-01-01,1703.2
+Tamil Nadu,Coimbatore,Wood,2026-02-01,1416.77
+Tamil Nadu,Madurai,Wood,2026-03-01,1475.04
+Tamil Nadu,Kanchipuram,Wood,2026-04-01,1641.41
+Tamil Nadu,Salem,Wood,2026-05-01,1597.54
+Tamil Nadu,Madurai,Wood,2026-06-01,1539.68
+Tamil Nadu,Salem,Wood,2026-07-01,1666.72
+Tamil Nadu,Kanchipuram,Wood,2026-08-01,1676.62
+Tamil Nadu,Coimbatore,Wood,2026-09-01,1685.42
+Tamil Nadu,Salem,Brass,2026-01-01,267.23
+Tamil Nadu,Madurai,Brass,2026-02-01,284.95
+Tamil Nadu,Coimbatore,Brass,2026-03-01,291.64
+Tamil Nadu,Madurai,Brass,2026-04-01,268.86
+Tamil Nadu,Madurai,Brass,2026-05-01,261.66
+Tamil Nadu,Madurai,Brass,2026-06-01,274.61
+Tamil Nadu,Coimbatore,Brass,2026-07-01,283.55
+Tamil Nadu,Coimbatore,Brass,2026-08-01,274.82
+Tamil Nadu,Salem,Brass,2026-09-01,260.01
+Tamil Nadu,Salem,Silver-plated,2026-01-01,626.73
+Tamil Nadu,Salem,Silver-plated,2026-02-01,643.46
+Tamil Nadu,Madurai,Silver-plated,2026-03-01,589.52
+Tamil Nadu,Salem,Silver-plated,2026-04-01,649.66
+Tamil Nadu,Kanchipuram,Silver-plated,2026-05-01,691.02
+Tamil Nadu,Salem,Silver-plated,2026-06-01,657.65
+Tamil Nadu,Coimbatore,Silver-plated,2026-07-01,619.85
+Tamil Nadu,Madurai,Silver-plated,2026-08-01,652.83
+Tamil Nadu,Kanchipuram,Silver-plated,2026-09-01,668.04
+Tamil Nadu,Salem,Bamboo,2026-01-01,632.71
+Tamil Nadu,Kanchipuram,Bamboo,2026-02-01,626.2
+Tamil Nadu,Madurai,Bamboo,2026-03-01,558.16
+Tamil Nadu,Salem,Bamboo,2026-04-01,570.79
+Tamil Nadu,Madurai,Bamboo,2026-05-01,599.34
+Tamil Nadu,Kanchipuram,Bamboo,2026-06-01,633.04
+Tamil Nadu,Salem,Bamboo,2026-07-01,588.97
+Tamil Nadu,Kanchipuram,Bamboo,2026-08-01,573.12
+Tamil Nadu,Kanchipuram,Bamboo,2026-09-01,556.29
+Tamil Nadu,Kanchipuram,Leather,2026-01-01,1476.84
+Tamil Nadu,Madurai,Leather,2026-02-01,1655.35
+Tamil Nadu,Salem,Leather,2026-03-01,1475.09
+Tamil Nadu,Salem,Leather,2026-04-01,1461.84
+Tamil Nadu,Kanchipuram,Leather,2026-05-01,1657.03
+Tamil Nadu,Salem,Leather,2026-06-01,1492.04
+Tamil Nadu,Kanchipuram,Leather,2026-07-01,1428.56
+Tamil Nadu,Kanchipuram,Leather,2026-08-01,1546.4
+Tamil Nadu,Coimbatore,Leather,2026-09-01,1637.03
+Karnataka,Channapatna,Cotton,2026-01-01,669.78
+Karnataka,Dharwad,Cotton,2026-02-01,690.9
+Karnataka,Mysuru,Cotton,2026-03-01,610.13
+Karnataka,Bengaluru Rural,Cotton,2026-04-01,622.35
+Karnataka,Mysuru,Cotton,2026-05-01,606.82
+Karnataka,Bengaluru Rural,Cotton,2026-06-01,749.37
+Karnataka,Mysuru,Cotton,2026-07-01,709.43
+Karnataka,Channapatna,Cotton,2026-08-01,613.52
+Karnataka,Dharwad,Cotton,2026-09-01,656.35
+Karnataka,Channapatna,Silk,2026-01-01,1219.15
+Karnataka,Dharwad,Silk,2026-02-01,1337.15
+Karnataka,Bengaluru Rural,Silk,2026-03-01,1290.55
+Karnataka,Mysuru,Silk,2026-04-01,1312.59
+Karnataka,Bengaluru Rural,Silk,2026-05-01,1177.66
+Karnataka,Bengaluru Rural,Silk,2026-06-01,1124.71
+Karnataka,Mysuru,Silk,2026-07-01,1209.7
+Karnataka,Bengaluru Rural,Silk,2026-08-01,1156.41
+Karnataka,Mysuru,Silk,2026-09-01,1202.31
+Karnataka,Channapatna,Wool,2026-01-01,196.15
+Karnataka,Channapatna,Wool,2026-02-01,194.18
+Karnataka,Bengaluru Rural,Wool,2026-03-01,219.85
+Karnataka,Mysuru,Wool,2026-04-01,181.61
+Karnataka,Mysuru,Wool,2026-05-01,212.17
+Karnataka,Dharwad,Wool,2026-06-01,212.04
+Karnataka,Bengaluru Rural,Wool,2026-07-01,213.57
+Karnataka,Bengaluru Rural,Wool,2026-08-01,204.52
+Karnataka,Bengaluru Rural,Wool,2026-09-01,203.84
+Karnataka,Mysuru,Jute,2026-01-01,827.75
+Karnataka,Bengaluru Rural,Jute,2026-02-01,820.55
+Karnataka,Channapatna,Jute,2026-03-01,832.99
+Karnataka,Bengaluru Rural,Jute,2026-04-01,828.28
+Karnataka,Mysuru,Jute,2026-05-01,842.64
+Karnataka,Mysuru,Jute,2026-06-01,874.71
+Karnataka,Dharwad,Jute,2026-07-01,889.11
+Karnataka,Mysuru,Jute,2026-08-01,847.06
+Karnataka,Channapatna,Jute,2026-09-01,875.68
+Karnataka,Bengaluru Rural,Clay,2026-01-01,1726.98
+Karnataka,Channapatna,Clay,2026-02-01,1673.75
+Karnataka,Dharwad,Clay,2026-03-01,1693.84
+Karnataka,Channapatna,Clay,2026-04-01,1832.66
+Karnataka,Bengaluru Rural,Clay,2026-05-01,1873.24
+Karnataka,Dharwad,Clay,2026-06-01,1824.58
+Karnataka,Mysuru,Clay,2026-07-01,1578.1
+Karnataka,Bengaluru Rural,Clay,2026-08-01,1585.04
+Karnataka,Channapatna,Clay,2026-09-01,1616.8
+Karnataka,Bengaluru Rural,Wood,2026-01-01,404.39
+Karnataka,Mysuru,Wood,2026-02-01,485.31
+Karnataka,Mysuru,Wood,2026-03-01,423.25
+Karnataka,Channapatna,Wood,2026-04-01,423.4
+Karnataka,Channapatna,Wood,2026-05-01,430.17
+Karnataka,Channapatna,Wood,2026-06-01,477.97
+Karnataka,Mysuru,Wood,2026-07-01,427.46
+Karnataka,Bengaluru Rural,Wood,2026-08-01,432.66
+Karnataka,Channapatna,Wood,2026-09-01,435.29
+Karnataka,Channapatna,Brass,2026-01-01,917.26
+Karnataka,Mysuru,Brass,2026-02-01,887.32
+Karnataka,Mysuru,Brass,2026-03-01,951.04
+Karnataka,Bengaluru Rural,Brass,2026-04-01,837.74
+Karnataka,Dharwad,Brass,2026-05-01,972.34
+Karnataka,Mysuru,Brass,2026-06-01,811.64
+Karnataka,Bengaluru Rural,Brass,2026-07-01,928.01
+Karnataka,Dharwad,Brass,2026-08-01,938.15
+Karnataka,Dharwad,Brass,2026-09-01,985.27
+Karnataka,Mysuru,Silver-plated,2026-01-01,777.75
+Karnataka,Mysuru,Silver-plated,2026-02-01,835.65
+Karnataka,Channapatna,Silver-plated,2026-03-01,895.31
+Karnataka,Bengaluru Rural,Silver-plated,2026-04-01,768.47
+Karnataka,Mysuru,Silver-plated,2026-05-01,777.46
+Karnataka,Mysuru,Silver-plated,2026-06-01,803.53
+Karnataka,Bengaluru Rural,Silver-plated,2026-07-01,921.11
+Karnataka,Channapatna,Silver-plated,2026-08-01,790.42
+Karnataka,Mysuru,Silver-plated,2026-09-01,814.8
+Karnataka,Mysuru,Bamboo,2026-01-01,1531.02
+Karnataka,Channapatna,Bamboo,2026-02-01,1597.6
+Karnataka,Channapatna,Bamboo,2026-03-01,1465.72
+Karnataka,Mysuru,Bamboo,2026-04-01,1478.84
+Karnataka,Channapatna,Bamboo,2026-05-01,1469.25
+Karnataka,Bengaluru Rural,Bamboo,2026-06-01,1557.87
+Karnataka,Dharwad,Bamboo,2026-07-01,1672.76
+Karnataka,Channapatna,Bamboo,2026-08-01,1515.23
+Karnataka,Dharwad,Bamboo,2026-09-01,1495.8
+Karnataka,Dharwad,Leather,2026-01-01,1496.81
+Karnataka,Bengaluru Rural,Leather,2026-02-01,1441.31
+Karnataka,Mysuru,Leather,2026-03-01,1518.55
+Karnataka,Bengaluru Rural,Leather,2026-04-01,1278.25
+Karnataka,Mysuru,Leather,2026-05-01,1316.97
+Karnataka,Bengaluru Rural,Leather,2026-06-01,1343.28
+Karnataka,Dharwad,Leather,2026-07-01,1487.5
+Karnataka,Bengaluru Rural,Leather,2026-08-01,1511.84
+Karnataka,Bengaluru Rural,Leather,2026-09-01,1371.22
+Odisha,Puri,Cotton,2026-01-01,1178.93
+Odisha,Sambalpur,Cotton,2026-02-01,1229.84
+Odisha,Puri,Cotton,2026-03-01,1418.66
+Odisha,Cuttack,Cotton,2026-04-01,1431.97
+Odisha,Puri,Cotton,2026-05-01,1248.45
+Odisha,Puri,Cotton,2026-06-01,1259.48
+Odisha,Puri,Cotton,2026-07-01,1267.7
+Odisha,Cuttack,Cotton,2026-08-01,1298.4
+Odisha,Cuttack,Cotton,2026-09-01,1203.82
+Odisha,Cuttack,Silk,2026-01-01,638.13
+Odisha,Cuttack,Silk,2026-02-01,701.39
+Odisha,Koraput,Silk,2026-03-01,697.38
+Odisha,Sambalpur,Silk,2026-04-01,717.42
+Odisha,Sambalpur,Silk,2026-05-01,642.26
+Odisha,Koraput,Silk,2026-06-01,680.16
+Odisha,Sambalpur,Silk,2026-07-01,591.87
+Odisha,Koraput,Silk,2026-08-01,654.86
+Odisha,Koraput,Silk,2026-09-01,686.05
+Odisha,Cuttack,Wool,2026-01-01,1269.79
+Odisha,Sambalpur,Wool,2026-02-01,1172.91
+Odisha,Puri,Wool,2026-03-01,1041.8
+Odisha,Cuttack,Wool,2026-04-01,1128.06
+Odisha,Puri,Wool,2026-05-01,1259.11
+Odisha,Puri,Wool,2026-06-01,1066.2
+Odisha,Sambalpur,Wool,2026-07-01,1076.8
+Odisha,Cuttack,Wool,2026-08-01,1141.51
+Odisha,Sambalpur,Wool,2026-09-01,1233.59
+Odisha,Puri,Jute,2026-01-01,1558.66
+Odisha,Cuttack,Jute,2026-02-01,1760.65
+Odisha,Cuttack,Jute,2026-03-01,1787.04
+Odisha,Cuttack,Jute,2026-04-01,1883.46
+Odisha,Cuttack,Jute,2026-05-01,1612.26
+Odisha,Sambalpur,Jute,2026-06-01,1574.48
+Odisha,Sambalpur,Jute,2026-07-01,1835.88
+Odisha,Puri,Jute,2026-08-01,1839.19
+Odisha,Puri,Jute,2026-09-01,1577.18
+Odisha,Sambalpur,Clay,2026-01-01,1952.67
+Odisha,Koraput,Clay,2026-02-01,1718.41
+Odisha,Koraput,Clay,2026-03-01,1751.28
+Odisha,Cuttack,Clay,2026-04-01,1697.86
+Odisha,Koraput,Clay,2026-05-01,1979.83
+Odisha,Cuttack,Clay,2026-06-01,1852.22
+Odisha,Puri,Clay,2026-07-01,1975.68
+Odisha,Puri,Clay,2026-08-01,1783.42
+Odisha,Cuttack,Clay,2026-09-01,1825.81
+Odisha,Koraput,Wood,2026-01-01,255.55
+Odisha,Puri,Wood,2026-02-01,221.75
+Odisha,Cuttack,Wood,2026-03-01,232.14
+Odisha,Puri,Wood,2026-04-01,229.54
+Odisha,Puri,Wood,2026-05-01,224.87
+Odisha,Koraput,Wood,2026-06-01,230.23
+Odisha,Sambalpur,Wood,2026-07-01,213.69
+Odisha,Cuttack,Wood,2026-08-01,256.39
+Odisha,Sambalpur,Wood,2026-09-01,223.49
+Odisha,Sambalpur,Brass,2026-01-01,612.36
+Odisha,Cuttack,Brass,2026-02-01,511.19
+Odisha,Koraput,Brass,2026-03-01,577.85
+Odisha,Cuttack,Brass,2026-04-01,564.77
+Odisha,Cuttack,Brass,2026-05-01,514.74
+Odisha,Sambalpur,Brass,2026-06-01,535.77
+Odisha,Cuttack,Brass,2026-07-01,520.91
+Odisha,Cuttack,Brass,2026-08-01,598.84
+Odisha,Sambalpur,Brass,2026-09-01,507.64
+Odisha,Koraput,Silver-plated,2026-01-01,700.16
+Odisha,Koraput,Silver-plated,2026-02-01,603.54
+Odisha,Puri,Silver-plated,2026-03-01,583.15
+Odisha,Sambalpur,Silver-plated,2026-04-01,629.85
+Odisha,Cuttack,Silver-plated,2026-05-01,580.42
+Odisha,Puri,Silver-plated,2026-06-01,704.97
+Odisha,Puri,Silver-plated,2026-07-01,596.5
+Odisha,Sambalpur,Silver-plated,2026-08-01,600.68
+Odisha,Cuttack,Silver-plated,2026-09-01,717.65
+Odisha,Sambalpur,Bamboo,2026-01-01,1597.84
+Odisha,Cuttack,Bamboo,2026-02-01,1659.53
+Odisha,Sambalpur,Bamboo,2026-03-01,1488.26
+Odisha,Koraput,Bamboo,2026-04-01,1718.4
+Odisha,Sambalpur,Bamboo,2026-05-01,1679.88
+Odisha,Koraput,Bamboo,2026-06-01,1584.66
+Odisha,Puri,Bamboo,2026-07-01,1755.87
+Odisha,Koraput,Bamboo,2026-08-01,1571.82
+Odisha,Puri,Bamboo,2026-09-01,1455.12
+Odisha,Sambalpur,Leather,2026-01-01,161.12
+Odisha,Sambalpur,Leather,2026-02-01,157.23
+Odisha,Puri,Leather,2026-03-01,154.2
+Odisha,Sambalpur,Leather,2026-04-01,154.35
+Odisha,Koraput,Leather,2026-05-01,151.48
+Odisha,Koraput,Leather,2026-06-01,138.37
+Odisha,Sambalpur,Leather,2026-07-01,140.39
+Odisha,Sambalpur,Leather,2026-08-01,154.25
+Odisha,Sambalpur,Leather,2026-09-01,148.54
+Assam,Sivasagar,Cotton,2026-01-01,207.29
+Assam,Sivasagar,Cotton,2026-02-01,204.57
+Assam,Barpeta,Cotton,2026-03-01,241.18
+Assam,Dibrugarh,Cotton,2026-04-01,213.54
+Assam,Kamrup,Cotton,2026-05-01,220.76
+Assam,Sivasagar,Cotton,2026-06-01,248.58
+Assam,Kamrup,Cotton,2026-07-01,244.26
+Assam,Sivasagar,Cotton,2026-08-01,223.57
+Assam,Dibrugarh,Cotton,2026-09-01,205.13
+Assam,Kamrup,Silk,2026-01-01,604.74
+Assam,Sivasagar,Silk,2026-02-01,667.92
+Assam,Dibrugarh,Silk,2026-03-01,692.45
+Assam,Sivasagar,Silk,2026-04-01,667.8
+Assam,Dibrugarh,Silk,2026-05-01,676.06
+Assam,Barpeta,Silk,2026-06-01,677.95
+Assam,Barpeta,Silk,2026-07-01,645.1
+Assam,Kamrup,Silk,2026-08-01,721.09
+Assam,Barpeta,Silk,2026-09-01,721.44
+Assam,Kamrup,Wool,2026-01-01,1035.33
+Assam,Sivasagar,Wool,2026-02-01,1094.48
+Assam,Sivasagar,Wool,2026-03-01,1085.32
+Assam,Dibrugarh,Wool,2026-04-01,1073.33
+Assam,Kamrup,Wool,2026-05-01,1105.82
+Assam,Barpeta,Wool,2026-06-01,1144.07
+Assam,Barpeta,Wool,2026-07-01,1200.42
+Assam,Dibrugarh,Wool,2026-08-01,1141.69
+Assam,Kamrup,Wool,2026-09-01,1218.3
+Assam,Dibrugarh,Jute,2026-01-01,270.66
+Assam,Sivasagar,Jute,2026-02-01,246.19
+Assam,Barpeta,Jute,2026-03-01,248.33
+Assam,Dibrugarh,Jute,2026-04-01,286.35
+Assam,Barpeta,Jute,2026-05-01,244.23
+Assam,Sivasagar,Jute,2026-06-01,247.87
+Assam,Dibrugarh,Jute,2026-07-01,268.51
+Assam,Dibrugarh,Jute,2026-08-01,277.48
+Assam,Kamrup,Jute,2026-09-01,274.64
+Assam,Dibrugarh,Clay,2026-01-01,1427.27
+Assam,Dibrugarh,Clay,2026-02-01,1488.34
+Assam,Dibrugarh,Clay,2026-03-01,1657.71
+Assam,Sivasagar,Clay,2026-04-01,1497.08
+Assam,Sivasagar,Clay,2026-05-01,1711.76
+Assam,Dibrugarh,Clay,2026-06-01,1591.29
+Assam,Barpeta,Clay,2026-07-01,1440.96
+Assam,Kamrup,Clay,2026-08-01,1570.65
+Assam,Sivasagar,Clay,2026-09-01,1698.01
+Assam,Kamrup,Wood,2026-01-01,1578.48
+Assam,Dibrugarh,Wood,2026-02-01,1510.56
+Assam,Dibrugarh,Wood,2026-03-01,1380.21
+Assam,Dibrugarh,Wood,2026-04-01,1351.0
+Assam,Kamrup,Wood,2026-05-01,1565.91
+Assam,Kamrup,Wood,2026-06-01,1413.73
+Assam,Barpeta,Wood,2026-07-01,1381.31
+Assam,Kamrup,Wood,2026-08-01,1527.88
+Assam,Dibrugarh,Wood,2026-09-01,1497.16
+Assam,Sivasagar,Brass,2026-01-01,360.85
+Assam,Sivasagar,Brass,2026-02-01,348.25
+Assam,Dibrugarh,Brass,2026-03-01,307.06
+Assam,Kamrup,Brass,2026-04-01,357.81
+Assam,Dibrugarh,Brass,2026-05-01,327.34
+Assam,Kamrup,Brass,2026-06-01,355.57
+Assam,Dibrugarh,Brass,2026-07-01,340.46
+Assam,Barpeta,Brass,2026-08-01,308.78
+Assam,Sivasagar,Brass,2026-09-01,344.32
+Assam,Dibrugarh,Silver-plated,2026-01-01,831.04
+Assam,Barpeta,Silver-plated,2026-02-01,921.12
+Assam,Barpeta,Silver-plated,2026-03-01,832.52
+Assam,Dibrugarh,Silver-plated,2026-04-01,879.82
+Assam,Dibrugarh,Silver-plated,2026-05-01,786.35
+Assam,Dibrugarh,Silver-plated,2026-06-01,772.83
+Assam,Barpeta,Silver-plated,2026-07-01,888.22
+Assam,Kamrup,Silver-plated,2026-08-01,781.4
+Assam,Sivasagar,Silver-plated,2026-09-01,856.3
+Assam,Sivasagar,Bamboo,2026-01-01,1626.18
+Assam,Barpeta,Bamboo,2026-02-01,1648.29
+Assam,Sivasagar,Bamboo,2026-03-01,1507.03
+Assam,Dibrugarh,Bamboo,2026-04-01,1538.64
+Assam,Barpeta,Bamboo,2026-05-01,1616.25
+Assam,Barpeta,Bamboo,2026-06-01,1467.27
+Assam,Barpeta,Bamboo,2026-07-01,1557.42
+Assam,Barpeta,Bamboo,2026-08-01,1474.03
+Assam,Sivasagar,Bamboo,2026-09-01,1475.52
+Assam,Dibrugarh,Leather,2026-01-01,1116.53
+Assam,Barpeta,Leather,2026-02-01,1091.76
+Assam,Barpeta,Leather,2026-03-01,988.85
+Assam,Barpeta,Leather,2026-04-01,1152.92
+Assam,Sivasagar,Leather,2026-05-01,999.85
+Assam,Barpeta,Leather,2026-06-01,1060.7
+Assam,Sivasagar,Leather,2026-07-01,1059.34
+Assam,Dibrugarh,Leather,2026-08-01,1077.65
+Assam,Kamrup,Leather,2026-09-01,1010.52
+Telangana,Nalgonda,Cotton,2026-01-01,208.92
+Telangana,Nalgonda,Cotton,2026-02-01,244.2
+Telangana,Nalgonda,Cotton,2026-03-01,227.55
+Telangana,Hyderabad,Cotton,2026-04-01,245.06
+Telangana,Karimnagar,Cotton,2026-05-01,242.22
+Telangana,Warangal,Cotton,2026-06-01,210.13
+Telangana,Nalgonda,Cotton,2026-07-01,209.86
+Telangana,Warangal,Cotton,2026-08-01,242.9
+Telangana,Nalgonda,Cotton,2026-09-01,233.1
+Telangana,Warangal,Silk,2026-01-01,1228.45
+Telangana,Nalgonda,Silk,2026-02-01,1172.11
+Telangana,Karimnagar,Silk,2026-03-01,1245.3
+Telangana,Hyderabad,Silk,2026-04-01,1288.99
+Telangana,Karimnagar,Silk,2026-05-01,1278.32
+Telangana,Warangal,Silk,2026-06-01,1105.48
+Telangana,Hyderabad,Silk,2026-07-01,1177.28
+Telangana,Hyderabad,Silk,2026-08-01,1235.37
+Telangana,Warangal,Silk,2026-09-01,1246.08
+Telangana,Warangal,Wool,2026-01-01,1056.39
+Telangana,Nalgonda,Wool,2026-02-01,1147.18
+Telangana,Warangal,Wool,2026-03-01,1170.11
+Telangana,Karimnagar,Wool,2026-04-01,1197.31
+Telangana,Hyderabad,Wool,2026-05-01,1221.96
+Telangana,Nalgonda,Wool,2026-06-01,1261.87
+Telangana,Nalgonda,Wool,2026-07-01,1085.32
+Telangana,Karimnagar,Wool,2026-08-01,1043.89
+Telangana,Nalgonda,Wool,2026-09-01,1152.32
+Telangana,Karimnagar,Jute,2026-01-01,1160.43
+Telangana,Hyderabad,Jute,2026-02-01,1243.43
+Telangana,Karimnagar,Jute,2026-03-01,1182.77
+Telangana,Karimnagar,Jute,2026-04-01,1180.54
+Telangana,Hyderabad,Jute,2026-05-01,1262.21
+Telangana,Karimnagar,Jute,2026-06-01,1182.36
+Telangana,Hyderabad,Jute,2026-07-01,1256.16
+Telangana,Nalgonda,Jute,2026-08-01,1125.05
+Telangana,Hyderabad,Jute,2026-09-01,1105.99
+Telangana,Warangal,Clay,2026-01-01,666.29
+Telangana,Hyderabad,Clay,2026-02-01,613.08
+Telangana,Nalgonda,Clay,2026-03-01,703.41
+Telangana,Hyderabad,Clay,2026-04-01,671.4
+Telangana,Hyderabad,Clay,2026-05-01,587.63
+Telangana,Warangal,Clay,2026-06-01,691.69
+Telangana,Karimnagar,Clay,2026-07-01,621.32
+Telangana,Karimnagar,Clay,2026-08-01,682.24
+Telangana,Warangal,Clay,2026-09-01,569.23
+Telangana,Nalgonda,Wood,2026-01-01,1280.12
+Telangana,Nalgonda,Wood,2026-02-01,1226.79
+Telangana,Nalgonda,Wood,2026-03-01,1214.43
+Telangana,Karimnagar,Wood,2026-04-01,1234.89
+Telangana,Hyderabad,Wood,2026-05-01,1137.56
+Telangana,Karimnagar,Wood,2026-06-01,1130.79
+Telangana,Hyderabad,Wood,2026-07-01,1192.69
+Telangana,Karimnagar,Wood,2026-08-01,1251.99
+Telangana,Warangal,Wood,2026-09-01,1174.9
+Telangana,Karimnagar,Brass,2026-01-01,992.33
+Telangana,Warangal,Brass,2026-02-01,846.6
+Telangana,Warangal,Brass,2026-03-01,918.05
+Telangana,Hyderabad,Brass,2026-04-01,907.45
+Telangana,Hyderabad,Brass,2026-05-01,850.97
+Telangana,Nalgonda,Brass,2026-06-01,916.69
+Telangana,Karimnagar,Brass,2026-07-01,942.27
+Telangana,Karimnagar,Brass,2026-08-01,852.84
+Telangana,Karimnagar,Brass,2026-09-01,949.97
+Telangana,Warangal,Silver-plated,2026-01-01,683.63
+Telangana,Warangal,Silver-plated,2026-02-01,670.36
+Telangana,Warangal,Silver-plated,2026-03-01,717.2
+Telangana,Nalgonda,Silver-plated,2026-04-01,772.16
+Telangana,Hyderabad,Silver-plated,2026-05-01,693.66
+Telangana,Nalgonda,Silver-plated,2026-06-01,657.23
+Telangana,Karimnagar,Silver-plated,2026-07-01,785.79
+Telangana,Nalgonda,Silver-plated,2026-08-01,767.08
+Telangana,Hyderabad,Silver-plated,2026-09-01,743.47
+Telangana,Karimnagar,Bamboo,2026-01-01,1105.83
+Telangana,Warangal,Bamboo,2026-02-01,1243.56
+Telangana,Karimnagar,Bamboo,2026-03-01,1184.74
+Telangana,Warangal,Bamboo,2026-04-01,1195.74
+Telangana,Nalgonda,Bamboo,2026-05-01,1140.78
+Telangana,Karimnagar,Bamboo,2026-06-01,1323.67
+Telangana,Hyderabad,Bamboo,2026-07-01,1295.62
+Telangana,Hyderabad,Bamboo,2026-08-01,1196.88
+Telangana,Karimnagar,Bamboo,2026-09-01,1167.34
+Telangana,Hyderabad,Leather,2026-01-01,1177.16
+Telangana,Karimnagar,Leather,2026-02-01,1083.49
+Telangana,Nalgonda,Leather,2026-03-01,1174.33
+Telangana,Hyderabad,Leather,2026-04-01,1165.17
+Telangana,Hyderabad,Leather,2026-05-01,1126.59
+Telangana,Karimnagar,Leather,2026-06-01,1168.07
+Telangana,Karimnagar,Leather,2026-07-01,1140.81
+Telangana,Karimnagar,Leather,2026-08-01,1037.55
+Telangana,Warangal,Leather,2026-09-01,1003.1

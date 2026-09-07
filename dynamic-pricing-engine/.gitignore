@@ -1,0 +1,8 @@
+parquet-to-csv.py
+data/indian_fashion_ecommerce/parquet
+prompts/
+docs/
+.pytest_cache/
+dynamic-pricing-engine.zip
+supabase-table-schema/
+__pycache__/
