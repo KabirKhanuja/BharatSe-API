@@ -19,7 +19,10 @@ import app.models  # noqa: F401 - importing registers every table
 from app.core.config import settings
 
 config = context.config
-config.set_main_option("sqlalchemy.url", settings.DATABASE_URL)
+# configparser treats % as interpolation syntax, and the Supabase password is
+# percent encoded, so passing the URL straight through makes every alembic
+# command die before it connects. Doubling the signs escapes them.
+config.set_main_option("sqlalchemy.url", settings.DATABASE_URL.replace("%", "%%"))
 
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
