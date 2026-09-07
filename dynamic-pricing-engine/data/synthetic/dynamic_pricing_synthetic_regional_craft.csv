@@ -1,0 +1,121 @@
+state,district,craft_type,typical_material,typical_category
+Maharashtra,Pune,Metal Craft,Bamboo,Saree
+Maharashtra,Pune,Jewellery,Cotton,Jewellery
+Maharashtra,Pune,Embroidery,Cotton,Bag
+Maharashtra,Nagpur,Wood Craft,Leather,Saree
+Maharashtra,Nagpur,Pottery,Silver-plated,Pottery
+Maharashtra,Nagpur,Leather Craft,Clay,Basket
+Maharashtra,Solapur,Pottery,Cotton,Pottery
+Maharashtra,Solapur,Wood Craft,Leather,Pottery
+Maharashtra,Solapur,Metal Craft,Leather,Bag
+Maharashtra,Kolhapur,Metal Craft,Jute,Basket
+Maharashtra,Kolhapur,Pottery,Brass,Bag
+Maharashtra,Kolhapur,Handloom,Bamboo,Stole
+Gujarat,Ahmedabad,Basketry,Wool,Saree
+Gujarat,Ahmedabad,Wood Craft,Clay,Pottery
+Gujarat,Ahmedabad,Jewellery,Silk,Bag
+Gujarat,Surat,Wood Craft,Wool,Basket
+Gujarat,Surat,Leather Craft,Wood,Saree
+Gujarat,Surat,Basketry,Clay,Stole
+Gujarat,Kutch,Embroidery,Leather,Basket
+Gujarat,Kutch,Handloom,Wood,Accessory
+Gujarat,Kutch,Jewellery,Clay,Bag
+Gujarat,Vadodara,Handloom,Wool,Stole
+Gujarat,Vadodara,Wood Craft,Silver-plated,Saree
+Gujarat,Vadodara,Block Print,Leather,Basket
+Rajasthan,Jaipur,Embroidery,Brass,Accessory
+Rajasthan,Jaipur,Handloom,Clay,Stole
+Rajasthan,Jaipur,Block Print,Bamboo,Stole
+Rajasthan,Jodhpur,Wood Craft,Wool,Wall Art
+Rajasthan,Jodhpur,Jewellery,Wool,Basket
+Rajasthan,Jodhpur,Handloom,Silver-plated,Jewellery
+Rajasthan,Udaipur,Metal Craft,Wool,Bag
+Rajasthan,Udaipur,Embroidery,Cotton,Stole
+Rajasthan,Udaipur,Jewellery,Clay,Home Decor
+Rajasthan,Barmer,Pottery,Bamboo,Home Decor
+Rajasthan,Barmer,Handloom,Jute,Home Decor
+Rajasthan,Barmer,Leather Craft,Jute,Saree
+West Bengal,Murshidabad,Leather Craft,Silk,Wall Art
+West Bengal,Murshidabad,Wood Craft,Leather,Pottery
+West Bengal,Murshidabad,Block Print,Jute,Stole
+West Bengal,Nadia,Leather Craft,Brass,Jewellery
+West Bengal,Nadia,Metal Craft,Jute,Jewellery
+West Bengal,Nadia,Block Print,Clay,Wall Art
+West Bengal,Bankura,Wood Craft,Wood,Jewellery
+West Bengal,Bankura,Pottery,Bamboo,Home Decor
+West Bengal,Bankura,Handloom,Silk,Basket
+West Bengal,Hooghly,Embroidery,Silk,Accessory
+West Bengal,Hooghly,Wood Craft,Silver-plated,Accessory
+West Bengal,Hooghly,Jewellery,Leather,Home Decor
+Uttar Pradesh,Varanasi,Basketry,Wood,Stole
+Uttar Pradesh,Varanasi,Leather Craft,Silk,Home Decor
+Uttar Pradesh,Varanasi,Embroidery,Cotton,Home Decor
+Uttar Pradesh,Lucknow,Leather Craft,Silver-plated,Wall Art
+Uttar Pradesh,Lucknow,Jewellery,Leather,Stole
+Uttar Pradesh,Lucknow,Basketry,Wood,Stole
+Uttar Pradesh,Moradabad,Embroidery,Leather,Basket
+Uttar Pradesh,Moradabad,Leather Craft,Bamboo,Home Decor
+Uttar Pradesh,Moradabad,Handloom,Silver-plated,Saree
+Uttar Pradesh,Bhadohi,Basketry,Bamboo,Accessory
+Uttar Pradesh,Bhadohi,Embroidery,Silk,Accessory
+Uttar Pradesh,Bhadohi,Leather Craft,Cotton,Home Decor
+Tamil Nadu,Kanchipuram,Leather Craft,Leather,Home Decor
+Tamil Nadu,Kanchipuram,Handloom,Wool,Wall Art
+Tamil Nadu,Kanchipuram,Metal Craft,Silk,Pottery
+Tamil Nadu,Madurai,Wood Craft,Silver-plated,Bag
+Tamil Nadu,Madurai,Handloom,Leather,Wall Art
+Tamil Nadu,Madurai,Pottery,Wool,Pottery
+Tamil Nadu,Coimbatore,Block Print,Clay,Bag
+Tamil Nadu,Coimbatore,Handloom,Cotton,Saree
+Tamil Nadu,Coimbatore,Pottery,Bamboo,Wall Art
+Tamil Nadu,Salem,Embroidery,Clay,Wall Art
+Tamil Nadu,Salem,Wood Craft,Wood,Accessory
+Tamil Nadu,Salem,Basketry,Leather,Home Decor
+Karnataka,Mysuru,Metal Craft,Silk,Bag
+Karnataka,Mysuru,Jewellery,Wool,Pottery
+Karnataka,Mysuru,Leather Craft,Leather,Stole
+Karnataka,Bengaluru Rural,Pottery,Silver-plated,Bag
+Karnataka,Bengaluru Rural,Jewellery,Wood,Wall Art
+Karnataka,Bengaluru Rural,Embroidery,Cotton,Accessory
+Karnataka,Channapatna,Block Print,Jute,Stole
+Karnataka,Channapatna,Leather Craft,Wood,Basket
+Karnataka,Channapatna,Metal Craft,Bamboo,Stole
+Karnataka,Dharwad,Pottery,Silk,Saree
+Karnataka,Dharwad,Handloom,Silver-plated,Home Decor
+Karnataka,Dharwad,Jewellery,Silk,Accessory
+Odisha,Cuttack,Pottery,Clay,Jewellery
+Odisha,Cuttack,Embroidery,Jute,Wall Art
+Odisha,Cuttack,Basketry,Wood,Pottery
+Odisha,Puri,Metal Craft,Jute,Stole
+Odisha,Puri,Basketry,Cotton,Pottery
+Odisha,Puri,Wood Craft,Cotton,Jewellery
+Odisha,Sambalpur,Metal Craft,Silver-plated,Pottery
+Odisha,Sambalpur,Block Print,Clay,Stole
+Odisha,Sambalpur,Embroidery,Brass,Pottery
+Odisha,Koraput,Handloom,Silver-plated,Stole
+Odisha,Koraput,Metal Craft,Jute,Stole
+Odisha,Koraput,Jewellery,Wool,Pottery
+Assam,Sivasagar,Pottery,Bamboo,Jewellery
+Assam,Sivasagar,Block Print,Silver-plated,Home Decor
+Assam,Sivasagar,Metal Craft,Leather,Home Decor
+Assam,Kamrup,Leather Craft,Wool,Home Decor
+Assam,Kamrup,Embroidery,Bamboo,Pottery
+Assam,Kamrup,Basketry,Silver-plated,Home Decor
+Assam,Barpeta,Metal Craft,Wool,Jewellery
+Assam,Barpeta,Embroidery,Wood,Wall Art
+Assam,Barpeta,Wood Craft,Silver-plated,Basket
+Assam,Dibrugarh,Leather Craft,Wool,Home Decor
+Assam,Dibrugarh,Jewellery,Cotton,Basket
+Assam,Dibrugarh,Pottery,Silver-plated,Accessory
+Telangana,Hyderabad,Pottery,Silver-plated,Jewellery
+Telangana,Hyderabad,Block Print,Clay,Pottery
+Telangana,Hyderabad,Basketry,Jute,Wall Art
+Telangana,Warangal,Jewellery,Cotton,Jewellery
+Telangana,Warangal,Wood Craft,Brass,Home Decor
+Telangana,Warangal,Handloom,Jute,Stole
+Telangana,Nalgonda,Embroidery,Jute,Home Decor
+Telangana,Nalgonda,Jewellery,Silver-plated,Stole
+Telangana,Nalgonda,Pottery,Bamboo,Bag
+Telangana,Karimnagar,Block Print,Silver-plated,Home Decor
+Telangana,Karimnagar,Leather Craft,Bamboo,Bag
+Telangana,Karimnagar,Embroidery,Leather,Basket
