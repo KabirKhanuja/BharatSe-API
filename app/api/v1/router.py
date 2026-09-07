@@ -10,6 +10,7 @@ from app.api.v1.routes import (
     pricing,
     products,
     search,
+    verification,
 )
 
 api_router = APIRouter()
@@ -22,4 +23,5 @@ api_router.include_router(images.router)
 api_router.include_router(pricing.router)
 api_router.include_router(passports.router)
 api_router.include_router(search.router)
+api_router.include_router(verification.router)
 api_router.include_router(ministry.router)

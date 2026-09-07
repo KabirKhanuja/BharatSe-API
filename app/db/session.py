@@ -17,9 +17,17 @@ engine: Engine = create_engine(
 )
 
 
-def get_session() -> Generator[Session | None, None, None]:
-    try:
-        with Session(engine) as session:
-            yield session
-    except Exception:
-        yield None
+def get_session() -> Generator[Session, None, None]:
+    """Hand a session to the route and clean it up afterwards.
+
+    Deliberately does NOT swallow exceptions. FastAPI throws whatever the route
+    raised back in at the yield point, so catching it here and yielding a second
+    time makes Python raise "generator didn\'t stop after throw()" and loses the
+    real error. Every 401 became a RuntimeError that way.
+
+    Graceful degradation when the database is unreachable is handled by the
+    OperationalError handler in main.py, which turns it into a 503 instead of a
+    500. That belongs there, not here.
+    """
+    with Session(engine) as session:
+        yield session
