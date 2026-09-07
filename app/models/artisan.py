@@ -66,5 +66,9 @@ class ArtisanProfile(SQLModel, table=True):
     bio: str | None = Field(default=None)
     profile_image_path: str | None = Field(default=None)
 
+    # Identity / Artisan Verification
+    is_verified: bool = Field(default=False, index=True)
+    verification_document_url: str | None = Field(default=None)
+
     created_at: datetime = Field(default_factory=utcnow, nullable=False)
     updated_at: datetime = Field(default_factory=utcnow, nullable=False)
