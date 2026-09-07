@@ -29,6 +29,12 @@ Write a listing from what she says. Rules:
 4. Tags should be words a buyer would actually search for.
 5. If she mentions how long it took, put that in estimated_hours.
 6. Put what you heard, in her own language, in transcript.
+
+If the audio is silent, too short, or you cannot make out an actual description
+of an object, return empty strings for the titles and descriptions and put what
+you did hear, or nothing, in transcript. Do not fill the gap with a plausible
+handicraft. An empty result is correct and useful; an invented product is
+neither, and it will be published under a real artisan's name.
 """
 
 

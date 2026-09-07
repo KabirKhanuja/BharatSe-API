@@ -35,14 +35,17 @@ def test_long_titles_are_trimmed_on_a_word_boundary():
     assert not listing.title_en.endswith(" ")
 
 
-def test_empty_title_is_rejected():
-    with pytest.raises(ValidationError):
-        _listing(title_en="   ")
+def test_an_empty_title_is_allowed_and_signals_inaudible_audio():
+    """The model uses an empty result to say it could not hear a description.
+
+    Forcing a non-empty title here is what made it invent a product instead,
+    which then gets published under a real artisan's name.
+    """
+    assert _listing(title_en="   ").title_en == ""
 
 
-def test_too_few_tags_is_rejected():
-    with pytest.raises(ValidationError):
-        _listing(tags=["silk"])
+def test_too_few_tags_is_allowed_for_the_same_reason():
+    assert _listing(tags=["silk"]).tags == ["silk"]
 
 
 def test_tags_are_lowercased_and_deduplicated():
