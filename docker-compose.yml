@@ -1,0 +1,36 @@
+services:
+  db:
+    # pgvector image, not plain postgres. The first migration enables the
+    # vector extension and will fail on the stock image.
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: bharatse
+      POSTGRES_PASSWORD: bharatse
+      POSTGRES_DB: bharatse
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bharatse"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    build: .
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://bharatse:bharatse@db:5432/bharatse
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./app:/app/app
+      - ./data:/app/data
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+volumes:
+  pgdata:

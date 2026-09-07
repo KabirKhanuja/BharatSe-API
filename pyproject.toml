@@ -1,0 +1,72 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bharatse-api"
+version = "0.1.0"
+description = "BharatSe API. Market linkage and smart cataloguing for artisans."
+requires-python = ">=3.12,<3.14"
+
+# Pinned to 3.12 deliberately. sentence-transformers does not yet classify to
+# 3.14, and CLIP embeddings are on the critical path for search.
+dependencies = [
+  "fastapi>=0.118",
+  "uvicorn[standard]>=0.37",
+  "pydantic>=2.11",
+  "pydantic-settings>=2.7",
+  "sqlmodel>=0.0.24",
+  "psycopg[binary]>=3.2",
+  "alembic>=1.14",
+  "pgvector>=0.3.6",
+  "python-jose[cryptography]>=3.3",
+  "pwdlib[argon2]>=0.2.1",
+  "python-multipart>=0.0.20",
+  "httpx>=0.28",
+  "tenacity>=9.0",
+  "structlog>=25.1",
+  "lightgbm>=4.5",
+  "numpy>=2.1",
+  "pandas>=2.2",
+  "scikit-learn>=1.6",
+  "joblib>=1.4",
+  "cryptography>=44.0",
+  "segno>=1.6",
+]
+
+[project.optional-dependencies]
+# Heavy and only needed where the work actually runs. Keeps the API image small.
+ai = [
+  "google-genai>=1.0",
+  "sentence-transformers>=3.3,<6",
+  "pillow>=11.0",
+  "opencv-python-headless>=4.10",
+  "rembg[cpu]>=2.0.83",
+]
+dev = [
+  "pytest>=8.3",
+  "pytest-asyncio>=0.25",
+  "ruff>=0.9",
+  "mypy>=1.14",
+]
+
+# alembic and data sit at the top level too, so auto discovery cannot guess
+# which one is the package.
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "N", "SIM"]
+ignore = ["B008"]  # FastAPI Depends() in defaults is the documented pattern
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
