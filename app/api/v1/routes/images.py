@@ -185,7 +185,9 @@ async def listing_images(
     folder = str(product.id)
 
     originals: list[str] = []
-    for upload, payload in zip(images, payloads):
+    # strict: payloads is built one per upload, so a length mismatch is a bug
+    # rather than something to silently truncate a photo over.
+    for upload, payload in zip(images, payloads, strict=True):
         originals.append(
             await run_in_threadpool(
                 supabase.upload,

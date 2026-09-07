@@ -4,6 +4,7 @@ import uuid
 from datetime import datetime
 from enum import StrEnum
 
+from sqlalchemy import String
 from sqlmodel import Field, SQLModel
 
 from app.models.base import new_id, utcnow
@@ -28,7 +29,9 @@ class Product(SQLModel, table=True):
     client_id: str = Field(index=True, unique=True, max_length=64)
 
     artisan_id: uuid.UUID = Field(foreign_key="users.id", index=True)
-    status: ProductStatus = Field(default=ProductStatus.DRAFT, index=True)
+    status: ProductStatus = Field(
+        default=ProductStatus.DRAFT, index=True, sa_type=String
+    )
 
     title_en: str | None = Field(default=None, max_length=160)
     title_hi: str | None = Field(default=None, max_length=160)

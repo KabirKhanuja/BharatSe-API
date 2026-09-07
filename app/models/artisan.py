@@ -4,6 +4,7 @@ import uuid
 from datetime import datetime
 from enum import StrEnum
 
+from sqlalchemy import String
 from sqlmodel import Field, SQLModel
 
 from app.models.base import new_id, utcnow
@@ -32,7 +33,7 @@ class User(SQLModel, table=True):
     id: uuid.UUID = Field(default_factory=new_id, primary_key=True)
     phone: str = Field(index=True, unique=True, max_length=20)
     name: str = Field(max_length=120)
-    role: Role = Field(default=Role.ARTISAN, index=True)
+    role: Role = Field(default=Role.ARTISAN, index=True, sa_type=String)
     password_hash: str | None = Field(default=None)
     preferred_language: str = Field(default="hi", max_length=8)
     is_active: bool = Field(default=True)
@@ -56,7 +57,7 @@ class ArtisanProfile(SQLModel, table=True):
 
     # The link that makes a Craft Passport worth anything. Provenance is tied
     # to a scheme record rather than to a self declared shop name.
-    scheme: Scheme = Field(default=Scheme.NONE, index=True)
+    scheme: Scheme = Field(default=Scheme.NONE, index=True, sa_type=String)
     beneficiary_id: str | None = Field(default=None, max_length=64, index=True)
     beneficiary_verified: bool = Field(default=False)
 

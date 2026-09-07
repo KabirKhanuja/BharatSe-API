@@ -30,6 +30,19 @@ class Settings(BaseSettings):
     GEMINI_API_KEY: str = ""
     GEMINI_MODEL: str = "gemini-3.8-flash"
 
+    # Separate key for the voice to listing call, so it can sit on a project
+    # with no billing and stay on the free tier.
+    #
+    # This is not belt and braces. Enabling billing moves a project to a paid
+    # tier wholesale; there is no free allowance running alongside it. The image
+    # model has no free tier at all, so the moment billing is switched on for
+    # pictures, every description starts billing too. Two keys keeps the voice
+    # path genuinely free.
+    #
+    # Falls back to GEMINI_API_KEY when unset, so nothing breaks if it is not
+    # configured.
+    GEMINI_LISTING_API_KEY: str = ""
+
     BHASHINI_USER_ID: str = ""
     BHASHINI_ULCA_API_KEY: str = ""
     BHASHINI_PIPELINE_ID: str = "64392f96daac500b55c543cd"
@@ -58,6 +71,11 @@ class Settings(BaseSettings):
 
     PASSPORT_PRIVATE_KEY_HEX: str = ""
     PASSPORT_PUBLIC_KEY_HEX: str = ""
+
+    @property
+    def listing_api_key(self) -> str:
+        """Key for the voice to listing call. Free tier key when there is one."""
+        return self.GEMINI_LISTING_API_KEY or self.GEMINI_API_KEY
 
     @field_validator("CORS_ORIGINS", mode="before")
     @classmethod
