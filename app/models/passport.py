@@ -38,3 +38,6 @@ class PassportScan(SQLModel, table=True):
     passport_id: uuid.UUID = Field(foreign_key="craft_passports.id", index=True)
     verified: bool = Field(default=False)
     scanned_at: datetime = Field(default_factory=utcnow, nullable=False)
+    country_code: str | None = Field(default=None, max_length=4)
+    state_code: str | None = Field(default=None, max_length=4)
+    referrer: str | None = Field(default=None)

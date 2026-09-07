@@ -36,7 +36,7 @@ class GeminiProvider(ListingProvider):
     name = "gemini"
 
     def healthy(self) -> bool:
-        return bool(settings.GEMINI_API_KEY)
+        return bool(settings.listing_api_key)
 
     def generate(
         self,
@@ -45,7 +45,7 @@ class GeminiProvider(ListingProvider):
         language_hint: str | None = None,
     ) -> GeneratedListing:
         if not self.healthy():
-            raise ProviderUnavailableError("GEMINI_API_KEY is not set")
+            raise ProviderUnavailableError("No Gemini key is set for listing generation")
 
         try:
             from google import genai
@@ -55,7 +55,7 @@ class GeminiProvider(ListingProvider):
                 "google-genai is not installed. pip install '.[ai]'"
             ) from exc
 
-        client = genai.Client(api_key=settings.GEMINI_API_KEY)
+        client = genai.Client(api_key=settings.listing_api_key)
         prompt = PROMPT
         if language_hint:
             prompt += f"\nShe is most likely speaking {language_hint}."

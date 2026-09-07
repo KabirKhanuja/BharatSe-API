@@ -42,6 +42,28 @@ alembic/       migrations
 scripts/       key generation, seed data download
 ```
 
+## A warning about migrations
+
+The deployed Supabase schema is a SUPERSET of the models in `app/models/`. It
+carries tables and columns added directly by other work: `b2b_leads`,
+`catalog_jobs`, `pricing_estimates`, `product_embeddings`, and extra columns on
+`products` and `product_images`.
+
+Alembic autogenerate compares the models against the database and writes a
+migration to make them match, which means it will happily generate DROP
+statements for everything it does not know about. Against a database with 100
+seeded products and 195 images, that is not recoverable in the time available.
+
+So, before running autogenerate:
+
+1. Check the generated file by hand. Every `op.drop_table` and
+   `op.drop_column` in it is a bug until proven otherwise.
+2. If the models and the database already agree, run `alembic stamp head`
+   rather than `alembic upgrade head`.
+
+There is a check for the columns we do own in `tests/`; run it after any model
+change.
+
 ## Pricing
 
 Three layers, in `app/services/pricing/`.
