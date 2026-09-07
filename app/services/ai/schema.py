@@ -45,8 +45,12 @@ class GeneratedListing(BaseModel):
     @classmethod
     def _trim_title(cls, v: str) -> str:
         v = v.strip()
+        # An empty title is allowed here on purpose: it is how the model tells
+        # us it could not hear a description. The route rejects that case with
+        # a message, which is far better than the model inventing a product to
+        # satisfy a validator.
         if not v:
-            raise ValueError("title cannot be empty")
+            return v
         # Marketplaces truncate past roughly 60 characters, so trim on a word
         # boundary rather than letting the channel cut mid word.
         return v if len(v) <= 60 else v[:60].rsplit(" ", 1)[0]
@@ -56,8 +60,8 @@ class GeneratedListing(BaseModel):
     def _clean_tags(cls, v: list[str]) -> list[str]:
         cleaned = [t.strip().lower() for t in v if t.strip()]
         deduped = list(dict.fromkeys(cleaned))
-        if len(deduped) < 3:
-            raise ValueError("at least 3 tags are required for search to work")
+        # Not enforced as a minimum for the same reason as the title: an
+        # inaudible recording legitimately produces nothing.
         return deduped[:8]
 
     @field_validator("materials")

@@ -21,6 +21,12 @@ class FloorOut(BaseModel):
     hours: float
 
 
+class ComparableOut(BaseModel):
+    title: str
+    price: int
+    material: str | None = None
+
+
 class PriceResponse(BaseModel):
     p10: int
     p50: int
@@ -30,3 +36,10 @@ class PriceResponse(BaseModel):
     model_used: bool
     lifted_to_floor: bool
     note: str
+
+    # How the number was actually reached, so the app can say so rather than
+    # presenting arithmetic as market analysis.
+    method: str = "cost"
+    rationale: str = ""
+    confidence: str = "low"
+    comparables: list[ComparableOut] = []

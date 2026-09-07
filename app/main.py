@@ -14,6 +14,7 @@ from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import JSONResponse
+from sqlalchemy.exc import OperationalError
 
 from app.api.v1.router import api_router
 from app.core.config import settings
@@ -84,6 +85,23 @@ async def request_context(request: Request, call_next):
         ms=elapsed_ms,
     )
     return response
+
+
+@app.exception_handler(OperationalError)
+async def database_unavailable_handler(request: Request, exc: OperationalError) -> JSONResponse:
+    """The database being unreachable is a 503, not a 500.
+
+    A 500 tells the caller we are broken. A 503 tells it to try again, which is
+    what the phone\'s outbox already knows how to do.
+    """
+    log.error("database_unreachable", path=request.url.path)
+    return JSONResponse(
+        status_code=503,
+        content={
+            "code": "database_unavailable",
+            "message": "The service is temporarily unable to reach its database.",
+        },
+    )
 
 
 @app.exception_handler(AppError)

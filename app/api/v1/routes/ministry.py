@@ -7,21 +7,46 @@ from app.api.deps import SessionDep
 from app.models.artisan import ArtisanProfile, Role, User
 from app.models.passport import CraftPassport, PassportScan
 from app.models.product import Product, ProductStatus
+from app.services.storage import supabase
 
 router = APIRouter(prefix="/ministry", tags=["ministry"])
 
 SUPABASE_STORAGE_BASE = "https://dzngjheuwmcgtbumxbux.supabase.co/storage/v1/object/public"
 SAMPLE_AADHAAR_DOC = "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Aadhaar_letter_large.png/640px-Aadhaar_letter_large.png"
 
+
+VERIFICATION_BUCKET = "verification-documents"
+
+
 def format_document_url(raw_url: str | None) -> str:
+    """Turn what is stored into something a reviewer's browser can load.
+
+    Documents uploaded by the app are stored as a bare object PATH in a private
+    bucket, so there is no public URL for them by design: an Aadhaar scan must
+    not be readable by anyone who guesses a link. Those get a signed URL that
+    expires in an hour.
+
+    Older rows hold full public URLs from earlier seeding and are passed
+    through unchanged.
+    """
     if not raw_url:
         return SAMPLE_AADHAAR_DOC
+
     if raw_url.startswith("http://") or raw_url.startswith("https://"):
         return raw_url
+
     if raw_url.startswith("artisan-uploads"):
-        # Supabase storage bucket artisan-uploads is not publicly initialized, use sample specimen
+        # That bucket was never initialised publicly; show the specimen.
         return SAMPLE_AADHAAR_DOC
+
     clean_path = raw_url.lstrip("/")
+
+    signed = supabase.signed_url(clean_path, bucket=VERIFICATION_BUCKET)
+    if signed:
+        return signed
+
+    # Signing failed, or the object predates the private bucket. Fall back to
+    # the public layout rather than showing nothing at all.
     return f"{SUPABASE_STORAGE_BASE}/{clean_path}"
 
 
@@ -33,7 +58,9 @@ def overview(session: SessionDep) -> dict:
                 select(func.count()).select_from(User).where(User.role == Role.ARTISAN)
             ).one()
             published = session.exec(
-                select(func.count()).select_from(Product).where(Product.status == ProductStatus.PUBLISHED)
+                select(func.count())
+                .select_from(Product)
+                .where(Product.status == ProductStatus.PUBLISHED)
             ).one()
             issued = session.exec(select(func.count()).select_from(CraftPassport)).one()
             scans = session.exec(select(func.count()).select_from(PassportScan)).one()
@@ -99,36 +126,47 @@ def by_state(session: SessionDep) -> list[dict]:
 
 # ARTISAN VERIFICATION ENDPOINTS
 
+
 @router.get("/verification/pending")
 def pending_verifications(session: SessionDep) -> list[dict]:
-    """Retrieves all pending artisans from database where is_verified == False AND verification_document_url IS NOT NULL."""
+    """Retrieves all pending artisans from database where is_verified == False AND
+    verification_document_url IS NOT NULL."""
     items = []
     if session is not None:
         try:
             # Query artisans where is_verified is False and verification_document_url is NOT NULL
             query = select(User, ArtisanProfile).where(
                 User.id == ArtisanProfile.user_id,
-                ArtisanProfile.is_verified == False,
-                ArtisanProfile.verification_document_url != None,
-                ArtisanProfile.verification_document_url != ""
+                # noqa comments are load bearing here: SQLAlchemy needs the
+                # operator overloads. `not x` and `is not None` evaluate in
+                # Python and produce the wrong SQL.
+                ArtisanProfile.is_verified == False,  # noqa: E712
+                ArtisanProfile.verification_document_url != None,  # noqa: E711
+                ArtisanProfile.verification_document_url != "",
             )
             results = session.exec(query).all()
             for user, profile in results:
-                items.append({
-                    "id": str(user.id),
-                    "user_id": str(user.id),
-                    "name": user.name,
-                    "phone": user.phone,
-                    "state": profile.state_code,
-                    "district": profile.district or "District",
-                    "craft": profile.craft or "Traditional Craft",
-                    "submitted_date": profile.created_at.strftime("%d %b %Y") if profile.created_at else "06 Sep 2026",
-                    "verification_status": "Pending",
-                    "is_verified": profile.is_verified,
-                    "verification_document_url": format_document_url(profile.verification_document_url),
-                    "pehchan_id": profile.beneficiary_id or f"PHN-{profile.state_code}-284731",
-                    "credentials_available": True,
-                })
+                items.append(
+                    {
+                        "id": str(user.id),
+                        "user_id": str(user.id),
+                        "name": user.name,
+                        "phone": user.phone,
+                        "state": profile.state_code,
+                        "district": profile.district or "District",
+                        "craft": profile.craft or "Traditional Craft",
+                        "submitted_date": profile.created_at.strftime("%d %b %Y")
+                        if profile.created_at
+                        else "06 Sep 2026",
+                        "verification_status": "Pending",
+                        "is_verified": profile.is_verified,
+                        "verification_document_url": format_document_url(
+                            profile.verification_document_url
+                        ),
+                        "pehchan_id": profile.beneficiary_id or f"PHN-{profile.state_code}-284731",
+                        "credentials_available": True,
+                    }
+                )
         except Exception as e:
             print("DB Query Error in pending_verifications:", e)
 
@@ -142,9 +180,15 @@ def artisan_verification_detail(artisan_id: str, session: SessionDep) -> dict:
         try:
             user = session.exec(select(User).where(User.id == artisan_id)).first()
             if user:
-                profile = session.exec(select(ArtisanProfile).where(ArtisanProfile.user_id == user.id)).first()
+                profile = session.exec(
+                    select(ArtisanProfile).where(ArtisanProfile.user_id == user.id)
+                ).first()
                 if profile:
-                    product_count = session.exec(select(func.count()).select_from(Product).where(Product.artisan_id == user.id)).one()
+                    product_count = session.exec(
+                        select(func.count())
+                        .select_from(Product)
+                        .where(Product.artisan_id == user.id)
+                    ).one()
                     return {
                         "id": str(user.id),
                         "user_id": str(user.id),
@@ -158,12 +202,18 @@ def artisan_verification_detail(artisan_id: str, session: SessionDep) -> dict:
                         "scheme": profile.scheme,
                         "beneficiary_id": profile.beneficiary_id,
                         "intake_monthly_income": profile.intake_monthly_income,
-                        "submitted_date": profile.created_at.strftime("%d %b %Y") if profile.created_at else "06 Sep 2026",
+                        "submitted_date": profile.created_at.strftime("%d %b %Y")
+                        if profile.created_at
+                        else "06 Sep 2026",
                         "is_verified": profile.is_verified,
                         "verification_status": "Approved" if profile.is_verified else "Pending",
-                        "verification_document_url": format_document_url(profile.verification_document_url),
+                        "verification_document_url": format_document_url(
+                            profile.verification_document_url
+                        ),
                         "pehchan_id": profile.beneficiary_id or f"PHN-{profile.state_code}-284731",
-                        "pehchan_status": "Verified" if profile.is_verified else "Pending Verification",
+                        "pehchan_status": "Verified"
+                        if profile.is_verified
+                        else "Pending Verification",
                         "workspace_verification_status": "Not Requested",
                         "product_count": product_count or 1,
                     }
@@ -196,11 +246,14 @@ def artisan_verification_detail(artisan_id: str, session: SessionDep) -> dict:
 
 @router.post("/verification/{artisan_id}/approve")
 def approve_artisan(artisan_id: str, session: SessionDep) -> dict:
-    """Updates artisan's verification status in database from is_verified=False to is_verified=True."""
+    """Updates artisan's verification status in database from is_verified=False to
+    is_verified=True."""
     updated = False
     if session is not None:
         try:
-            profile = session.exec(select(ArtisanProfile).where(ArtisanProfile.user_id == artisan_id)).first()
+            profile = session.exec(
+                select(ArtisanProfile).where(ArtisanProfile.user_id == artisan_id)
+            ).first()
             if profile:
                 profile.is_verified = True
                 session.add(profile)

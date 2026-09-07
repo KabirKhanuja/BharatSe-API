@@ -93,3 +93,44 @@ def fetch(url: str) -> bytes:
     except httpx.HTTPError as exc:
         raise ProviderUnavailableError(f"Could not fetch {url}: {exc}") from exc
     return response.content
+
+
+def signed_url(path: str, bucket: str | None = None, expires_in: int = 3600) -> str | None:
+    """A time limited URL for an object in a private bucket.
+
+    Identity documents live in a private bucket on purpose, so there is no
+    public URL to hand a reviewer. This mints one that expires, which means a
+    link pasted into a chat or left in a browser history stops working rather
+    than exposing an Aadhaar scan indefinitely.
+
+    Returns None rather than raising: a reviewer should see a broken document
+    panel, not a 500 that takes the whole queue down.
+    """
+    if not is_configured():
+        return None
+
+    bucket = bucket or settings.SUPABASE_BUCKET
+    path = path.lstrip("/")
+
+    try:
+        response = httpx.post(
+            f"{settings.SUPABASE_URL}/storage/v1/object/sign/{bucket}/{path}",
+            json={"expiresIn": expires_in},
+            headers={
+                "authorization": f"Bearer {settings.SUPABASE_SERVICE_KEY}",
+                "apikey": settings.SUPABASE_SERVICE_KEY,
+                "content-type": "application/json",
+            },
+            timeout=20,
+        )
+        response.raise_for_status()
+    except httpx.HTTPError as exc:
+        log.warning("sign_url_failed", path=path, bucket=bucket, error=str(exc))
+        return None
+
+    signed = response.json().get("signedURL") or response.json().get("signedUrl")
+    if not signed:
+        return None
+
+    # Supabase returns a path like /object/sign/bucket/key?token=...
+    return f"{settings.SUPABASE_URL}/storage/v1{signed}" if signed.startswith("/") else signed

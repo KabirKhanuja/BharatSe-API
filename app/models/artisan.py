@@ -31,7 +31,13 @@ class User(SQLModel, table=True):
     __tablename__ = "users"
 
     id: uuid.UUID = Field(default_factory=new_id, primary_key=True)
-    phone: str = Field(index=True, unique=True, max_length=20)
+    # Nullable now: a Google sign in has an email and no phone number.
+    phone: str | None = Field(default=None, index=True, unique=True, max_length=20)
+    email: str | None = Field(default=None, index=True, max_length=320)
+
+    # The join between Firebase, which says who someone is, and Postgres, which
+    # stays the source of truth for what they are inside the product.
+    firebase_uid: str | None = Field(default=None, index=True, unique=True, max_length=128)
     name: str = Field(max_length=120)
     role: Role = Field(default=Role.ARTISAN, index=True, sa_type=String)
     password_hash: str | None = Field(default=None)

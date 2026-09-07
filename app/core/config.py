@@ -17,6 +17,11 @@ class Settings(BaseSettings):
 
     DATABASE_URL: str = "postgresql+psycopg://bharatse:bharatse@localhost:5432/bharatse"
 
+    # Firebase is the identity provider. Only the project id is needed: ID
+    # tokens are verified against Google's public certificates, so there is no
+    # service account key to store or leak.
+    FIREBASE_PROJECT_ID: str = ""
+
     SECRET_KEY: str = "change_me"
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24 * 7

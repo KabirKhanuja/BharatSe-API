@@ -22,6 +22,7 @@ from fastapi.concurrency import run_in_threadpool
 from sqlmodel import Session, select
 
 from app.api.deps import CurrentArtisan, SessionDep
+from app.api.v1.routes.verification import sniff_type
 from app.core.errors import AppError, NotFoundError, ProviderUnavailableError
 from app.core.logging import get_logger
 from app.models.artisan import User
@@ -193,7 +194,10 @@ async def listing_images(
                 supabase.upload,
                 payload,
                 supabase.product_image_path(folder, "original", "jpg"),
-                upload.content_type or "image/jpeg",
+                # Flutter sends application/octet-stream, which the bucket
+                # rejects with a 400. Identify by the bytes instead.
+                sniff_type(payload, upload.content_type, upload.filename)
+                or "image/jpeg",
             )
         )
 

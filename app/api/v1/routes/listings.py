@@ -41,5 +41,19 @@ async def generate_listing(
     except ProviderUnavailableError as exc:
         raise exc.as_http() from exc
 
+    # An empty result means the model could not hear a description, which we
+    # ask it to say rather than invent one. Surface it as a clear message
+    # instead of handing the app a blank listing.
+    if not listing.title_en.strip() and not listing.title_hi.strip():
+        log.info(
+            "listing_inaudible",
+            artisan_id=str(artisan.id),
+            transcript=listing.transcript[:120],
+        )
+        raise AppError(
+            "We could not make out a description. Tap the microphone and "
+            "describe the piece again."
+        ).as_http()
+
     log.info("listing_generated", artisan_id=str(artisan.id), provider=provider.name)
     return ListingResponse(listing=listing, provider=provider.name)
