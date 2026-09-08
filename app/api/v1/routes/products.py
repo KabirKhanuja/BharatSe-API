@@ -9,7 +9,7 @@ from app.api.deps import CurrentArtisan, SessionDep
 from app.core.errors import NotFoundError
 from app.core.logging import get_logger
 from app.models.artisan import ArtisanProfile
-from app.models.product import Product, ProductStatus
+from app.models.product import Product, ProductImage, ProductStatus
 from app.schemas.common import Page
 from app.schemas.product import (
     ProductCreate,
@@ -109,11 +109,43 @@ def list_products(
     ).all()
 
     return Page(
-        items=[ProductOut.model_validate(r) for r in rows],
+        items=_with_images(session, rows),
         total=total,
         limit=limit,
         offset=offset,
     )
+
+
+def _with_images(session, products: list[Product]) -> list[ProductOut]:
+    """Attach each product's photographs in one query rather than N.
+
+    The phone rebuilds an artisan's catalogue from this after a reinstall, and
+    a grid of grey squares would read as broken even though the data is fine.
+    Prefers the generated photograph over the raw one, matching the buyer
+    catalogue, so the same listing does not look different on the two sides.
+    """
+    if not products:
+        return []
+
+    ids = [p.id for p in products]
+    images = session.exec(
+        select(ProductImage)
+        .where(col(ProductImage.product_id).in_(ids))
+        .order_by(col(ProductImage.position))
+    ).all()
+
+    by_product: dict[uuid.UUID, list[str]] = {}
+    for image in images:
+        url = image.enhanced_url or image.original_url
+        if url:
+            by_product.setdefault(image.product_id, []).append(url)
+
+    out = []
+    for product in products:
+        item = ProductOut.model_validate(product)
+        item.image_urls = by_product.get(product.id, [])
+        out.append(item)
+    return out
 
 
 @router.post("", response_model=ProductOut)

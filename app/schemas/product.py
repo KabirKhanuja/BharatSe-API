@@ -64,6 +64,11 @@ class ProductOut(BaseModel):
     created_at: datetime
     updated_at: datetime
 
+    # Populated by hand where it matters, because there is no relationship on
+    # the model and a listing without its photograph is not much of a listing.
+    # Empty is a valid answer: a row can exist before its images are uploaded.
+    image_urls: list[str] = []
+
     model_config = {"from_attributes": True}
 
 
