@@ -15,7 +15,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 COPY pyproject.toml ./
-RUN pip install --upgrade pip && pip install .
+# The deploy extra, not the bare package. Without google-genai every listing
+# generation and image enhancement returns 503, and it fails at runtime rather
+# than at build time, so the container starts looking perfectly healthy.
+RUN pip install --upgrade pip && pip install ".[deploy]"
 
 COPY app ./app
 COPY alembic ./alembic
@@ -25,7 +28,12 @@ COPY data ./data
 
 EXPOSE 8000
 
-HEALTHCHECK --interval=30s --timeout=5s --start-period=20s \
-  CMD curl -fsS http://localhost:8000/api/v1/health || exit 1
+# Render, Railway and Fly all inject the port to bind. Hardcoding 8000 makes
+# the container start cleanly and then be unreachable, which is the most
+# annoying possible failure because nothing looks wrong.
+ENV PORT=8000
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+HEALTHCHECK --interval=30s --timeout=5s --start-period=30s \
+  CMD curl -fsS "http://localhost:${PORT}/api/v1/health" || exit 1
+
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT}"]

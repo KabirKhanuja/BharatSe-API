@@ -35,7 +35,19 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-# Heavy and only needed where the work actually runs. Keeps the API image small.
+# What a deployed instance actually needs.
+#
+# Deliberately not the full `ai` extra. That pulls sentence-transformers, which
+# pulls torch, roughly two gigabytes, and rembg plus opencv on top. None of it
+# is on the demo path: CLIP search is not wired to any screen, and the rembg
+# cutout is only the fallback for when Gemini is unreachable, which on a server
+# with a stable connection it is not.
+deploy = [
+  "google-genai>=1.0",
+  "pillow>=11.0",
+]
+
+# Everything, for a machine doing the heavy work locally.
 ai = [
   "google-genai>=1.0",
   "sentence-transformers>=3.3,<6",

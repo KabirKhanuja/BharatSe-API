@@ -1,0 +1,49 @@
+# Render blueprint. Optional: you can configure the service by hand in the
+# dashboard instead, but this keeps the settings in the repo where they can be
+# reviewed rather than in someone's browser.
+services:
+  - type: web
+    name: bharatse-api
+    runtime: docker
+    plan: free
+    region: singapore          # closest to India of Render's free regions
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: LOG_LEVEL
+        value: INFO
+
+      # Everything below is a secret and is set in the dashboard, never here.
+      - key: DATABASE_URL
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_LISTING_API_KEY
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_KEY
+        sync: false
+      - key: FIREBASE_PROJECT_ID
+        sync: false
+
+      - key: GEMINI_MODEL
+        value: gemini-3.8-flash
+      - key: GEMINI_IMAGE_MODEL
+        value: gemini-3-pro-image
+      - key: LISTING_PROVIDER
+        value: gemini
+      - key: SUPABASE_BUCKET
+        value: product-assets
+      - key: REMBG_MODEL
+        value: isnet-general-use
+      - key: IMAGE_ASPECT_RATIO
+        value: "1:1"
+      - key: FAIR_WAGE_PER_HOUR
+        value: "60"
+      - key: CORS_ORIGINS
+        value: "*"
