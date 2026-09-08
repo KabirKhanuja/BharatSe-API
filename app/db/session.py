@@ -9,7 +9,14 @@ from app.core.config import settings
 
 engine: Engine = create_engine(
     settings.DATABASE_URL,
-    connect_args={"connect_timeout": 3},
+    # 3 seconds was too tight and it cost us a deploy. A cold connection to the
+    # Supabase session pooler takes about 2.5s from a laptop on good wifi, and
+    # more from a server in another region once TLS is included, so it timed
+    # out every time and surfaced as "database unreachable" with no clue why.
+    #
+    # This is a ceiling, not a target: a healthy connection still returns in
+    # milliseconds. It only decides how long we wait before giving up.
+    connect_args={"connect_timeout": 15},
     pool_pre_ping=True,  # a dropped connection should not surface as a 500
     pool_size=5,
     max_overflow=10,

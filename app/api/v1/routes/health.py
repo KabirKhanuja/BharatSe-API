@@ -17,7 +17,12 @@ def health() -> Health:
             connection.execute(text("SELECT 1"))
         database = "ok"
     except Exception as exc:  # noqa: BLE001 - any driver error means unreachable
-        database = f"unreachable: {type(exc).__name__}"
+        # Name the host. Without it, a wrong DATABASE_URL and a network problem
+        # look identical from the outside, and both just say "unreachable".
+        from urllib.parse import urlsplit
+
+        host = urlsplit(settings.DATABASE_URL).hostname or "unknown"
+        database = f"unreachable ({host}): {type(exc).__name__}"
 
     return Health(
         status="ok",
